@@ -1,6 +1,6 @@
 {
     "name": "node-red-todo-app",
-    "description": "A Todo-Backend implementation using Node-RED and CouchDB. A sample application for https://github.com/knolleary/node-red-in-production-workshop",
+    "description": "A Todo-Backend implementation using Node-RED and CouchDB. A sample application for https://github.com/taijihagino/node-red-todo-app.git",
     "version": "0.1.0",
     "dependencies": {
         "node-red-contrib-cloudantplus": "0.2.0"

@@ -1,9 +1,11 @@
 Node-RED Todo App
 ==================
 
-**This project is part of the [Node-RED in Production Workshop](https://github.com/knolleary/node-red-in-production-workshop).**
+**This project is part of the Tutorial hands-on on Packt Node-RED book.**
 
 ### About
+
+First of all, thanks to Nick O'Leary for creating and publishing the original hands-on workshop **[Node-RED in Production Workshop](https://github.com/knolleary/node-red-in-production-workshop)**.
 
 This is an example Node-RED project that provides a [Todo-Backend implementation](https://www.todobackend.com/).
 
