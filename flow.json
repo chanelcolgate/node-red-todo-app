@@ -7,6 +7,13 @@
         "info": ""
     },
     {
+        "id": "3f59388.403c4c8",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
         "id": "19d38fbf.a18f6",
         "type": "subflow",
         "name": "Get ToDo",
@@ -75,8 +82,7 @@
     {
         "id": "3e527677.c86c1a",
         "type": "cloudantplus",
-        "z": "",
-        "host": "http://localhost:5984",
+        "host": "http://this-couchdb:5984",
         "name": ""
     },
     {
@@ -981,5 +987,102 @@
         "x": 750,
         "y": 740,
         "wires": []
+    },
+    {
+        "id": "ffadfd6b.bb174",
+        "type": "watson-tone-analyzer-v3",
+        "z": "3f59388.403c4c8",
+        "name": "",
+        "tones": "all",
+        "sentences": "true",
+        "contentType": "false",
+        "tone-method": "generalTone",
+        "interface-version": "2016-05-19",
+        "inputlang": "en",
+        "service-endpoint": "https://api.us-south.tone-analyzer.watson.cloud.ibm.com/instances/0de12cba-b398-4cd0-ba5a-93b3a289b393",
+        "x": 600,
+        "y": 460,
+        "wires": [
+            [
+                "27612f1b.4cc84"
+            ]
+        ]
+    },
+    {
+        "id": "fac844a0.5d6138",
+        "type": "sentiment",
+        "z": "3f59388.403c4c8",
+        "name": "",
+        "property": "payload",
+        "x": 390,
+        "y": 460,
+        "wires": [
+            [
+                "ffadfd6b.bb174"
+            ]
+        ]
+    },
+    {
+        "id": "478af227.434ccc",
+        "type": "inject",
+        "z": "3f59388.403c4c8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "My name is nervermore",
+        "payloadType": "str",
+        "x": 290,
+        "y": 400,
+        "wires": [
+            [
+                "fac844a0.5d6138"
+            ]
+        ]
+    },
+    {
+        "id": "de45c4c6.301418",
+        "type": "debug",
+        "z": "3f59388.403c4c8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 830,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "27612f1b.4cc84",
+        "type": "function",
+        "z": "3f59388.403c4c8",
+        "name": "",
+        "func": "msg.payload = {\n    \"text\": msg.payload,\n    \"tone\": msg.response,\n    \"sentiment\": msg.sentiment\n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 730,
+        "y": 500,
+        "wires": [
+            [
+                "de45c4c6.301418"
+            ]
+        ]
     }
 ]
