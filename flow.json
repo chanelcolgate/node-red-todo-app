@@ -21,6 +21,20 @@
         "info": ""
     },
     {
+        "id": "9995b4c2.8d8f68",
+        "type": "tab",
+        "label": "Weather",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "3dd13241.f528fe",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
         "id": "19d38fbf.a18f6",
         "type": "subflow",
         "name": "Get ToDo",
@@ -1229,16 +1243,16 @@
         "id": "6a811060.5b99d",
         "type": "http in",
         "z": "a7c98f63.a00f9",
-        "name": "",
+        "name": "[get] /api/products?token=<token>",
         "url": "/api/products",
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 330,
+        "x": 380,
         "y": 360,
         "wires": [
             [
-                "1ac1de09.edcc52"
+                "437298ec.cf6b88"
             ]
         ]
     },
@@ -1253,8 +1267,8 @@
         "search": "_all_",
         "design": "",
         "index": "",
-        "x": 560,
-        "y": 360,
+        "x": 820,
+        "y": 420,
         "wires": [
             [
                 "601c5e79.02f4c"
@@ -1268,8 +1282,8 @@
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 710,
-        "y": 360,
+        "x": 990,
+        "y": 420,
         "wires": []
     },
     {
@@ -1309,7 +1323,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "payload.id",
+                "to": "payload._id",
                 "tot": "msg"
             }
         ],
@@ -1321,7 +1335,9 @@
         "x": 860,
         "y": 200,
         "wires": [
-            []
+            [
+                "7ffa8b93.098334"
+            ]
         ]
     },
     {
@@ -1335,7 +1351,7 @@
         "initialize": "",
         "finalize": "",
         "x": 660,
-        "y": 640,
+        "y": 980,
         "wires": [
             [
                 "edde4fd2.383c1"
@@ -1353,9 +1369,11 @@
         "payonly": false,
         "operation": "insert",
         "x": 840,
-        "y": 640,
+        "y": 980,
         "wires": [
-            []
+            [
+                "922bfd86.ce10c"
+            ]
         ]
     },
     {
@@ -1365,7 +1383,7 @@
         "name": "Add a new cart",
         "info": "",
         "x": 320,
-        "y": 440,
+        "y": 780,
         "wires": []
     },
     {
@@ -1378,7 +1396,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 310,
-        "y": 500,
+        "y": 840,
         "wires": [
             [
                 "e7ee2bf2.445338"
@@ -1412,7 +1430,7 @@
         "to": "",
         "reg": false,
         "x": 490,
-        "y": 500,
+        "y": 840,
         "wires": [
             [
                 "4693f424.657dbc"
@@ -1431,7 +1449,7 @@
         "design": "",
         "index": "",
         "x": 650,
-        "y": 500,
+        "y": 840,
         "wires": [
             [
                 "aeeae15e.e706c"
@@ -1457,7 +1475,7 @@
         "repair": false,
         "outputs": 2,
         "x": 480,
-        "y": 600,
+        "y": 940,
         "wires": [
             [
                 "beb2e40c.f6b118"
@@ -1478,7 +1496,7 @@
         "initialize": "",
         "finalize": "",
         "x": 660,
-        "y": 580,
+        "y": 920,
         "wires": [
             [
                 "c1e50d6b.6c7ca"
@@ -1496,10 +1514,10 @@
         "payonly": false,
         "operation": "insert",
         "x": 840,
-        "y": 580,
+        "y": 920,
         "wires": [
             [
-                "7a508fee.253fb"
+                "b8ca8c44.246dc"
             ]
         ]
     },
@@ -1510,7 +1528,7 @@
         "name": "Delete a cart",
         "info": "",
         "x": 310,
-        "y": 720,
+        "y": 1040,
         "wires": []
     },
     {
@@ -1523,7 +1541,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 320,
-        "y": 780,
+        "y": 1100,
         "wires": [
             [
                 "182ba886.8bc507"
@@ -1557,7 +1575,7 @@
         "to": "",
         "reg": false,
         "x": 490,
-        "y": 780,
+        "y": 1100,
         "wires": [
             [
                 "c1067ae3.2e5548"
@@ -1576,7 +1594,7 @@
         "design": "",
         "index": "",
         "x": 650,
-        "y": 780,
+        "y": 1100,
         "wires": [
             [
                 "f2b71457.429e08"
@@ -1601,8 +1619,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 500,
-        "y": 880,
+        "x": 480,
+        "y": 1200,
         "wires": [
             [
                 "d0999de.fab416"
@@ -1623,7 +1641,7 @@
         "initialize": "",
         "finalize": "",
         "x": 900,
-        "y": 820,
+        "y": 1140,
         "wires": [
             [
                 "98d35a69.066a18"
@@ -1641,7 +1659,7 @@
         "payonly": false,
         "operation": "insert",
         "x": 1090,
-        "y": 820,
+        "y": 1140,
         "wires": [
             []
         ]
@@ -1673,7 +1691,7 @@
         "to": "",
         "reg": false,
         "x": 670,
-        "y": 960,
+        "y": 1280,
         "wires": [
             [
                 "c473f0ad.90fbb"
@@ -1688,7 +1706,7 @@
         "statusCode": "",
         "headers": {},
         "x": 850,
-        "y": 960,
+        "y": 1280,
         "wires": []
     },
     {
@@ -1714,7 +1732,7 @@
         "repair": false,
         "outputs": 2,
         "x": 690,
-        "y": 840,
+        "y": 1160,
         "wires": [
             [
                 "5e2b86db.d7b788"
@@ -1734,8 +1752,8 @@
         "service": "_ext_",
         "payonly": false,
         "operation": "delete",
-        "x": 1090,
-        "y": 880,
+        "x": 910,
+        "y": 1200,
         "wires": [
             [
                 "d83c89f4.816be8"
@@ -1749,7 +1767,7 @@
         "name": "Delete all carts",
         "info": "",
         "x": 300,
-        "y": 1040,
+        "y": 1360,
         "wires": []
     },
     {
@@ -1762,7 +1780,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 310,
-        "y": 1100,
+        "y": 1420,
         "wires": [
             [
                 "9c66d8db.206138"
@@ -1796,7 +1814,7 @@
         "to": "",
         "reg": false,
         "x": 510,
-        "y": 1100,
+        "y": 1420,
         "wires": [
             [
                 "51acad1d.9a3984"
@@ -1815,7 +1833,7 @@
         "design": "",
         "index": "",
         "x": 650,
-        "y": 1100,
+        "y": 1420,
         "wires": [
             [
                 "4fb0268e.d74188"
@@ -1833,7 +1851,7 @@
         "payonly": false,
         "operation": "delete",
         "x": 820,
-        "y": 1100,
+        "y": 1420,
         "wires": [
             [
                 "52db5926.ca8d28"
@@ -1848,7 +1866,7 @@
         "statusCode": "",
         "headers": {},
         "x": 970,
-        "y": 1100,
+        "y": 1420,
         "wires": []
     },
     {
@@ -1858,12 +1876,879 @@
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 1250,
-        "y": 880,
+        "x": 1090,
+        "y": 1200,
         "wires": []
     },
     {
-        "id": "7a508fee.253fb",
+        "id": "3a94c570.1d61ea",
+        "type": "comment",
+        "z": "a7c98f63.a00f9",
+        "name": "login",
+        "info": "",
+        "x": 290,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "2fef0a0b.5468d6",
+        "type": "http in",
+        "z": "a7c98f63.a00f9",
+        "name": "",
+        "url": "/api/login",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 320,
+        "y": 100,
+        "wires": [
+            [
+                "fd76449f.bb7858"
+            ]
+        ]
+    },
+    {
+        "id": "fd76449f.bb7858",
+        "type": "function",
+        "z": "a7c98f63.a00f9",
+        "name": "Fake API token",
+        "func": "// A fake API token our server validates\nconst API_TOKEN = 'D6W69PRgCoDKgHZGJmRUNA';\n\nconst postRequest = {\n    \"success\": true,\n    \"token\": \"D6W69PRgCoDKgHZGJmRUNA\"\n};\n\nmsg.payload = postRequest;\nnode.send(msg);",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 540,
+        "y": 100,
+        "wires": [
+            [
+                "fbc7b9ce.545658"
+            ]
+        ]
+    },
+    {
+        "id": "fbc7b9ce.545658",
+        "type": "http response",
+        "z": "a7c98f63.a00f9",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 710,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "da6ac5f9.1c7e28",
+        "type": "comment",
+        "z": "a7c98f63.a00f9",
+        "name": "Get all carts",
+        "info": "",
+        "x": 310,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "f63fe547.ab4338",
+        "type": "http in",
+        "z": "a7c98f63.a00f9",
+        "name": "[get] /api/cart?token=<token>",
+        "url": "/api/cart",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 360,
+        "y": 620,
+        "wires": [
+            [
+                "771fd0dd.5cc9c"
+            ]
+        ]
+    },
+    {
+        "id": "d0ca95f9.6e7c08",
+        "type": "cloudantplus in",
+        "z": "a7c98f63.a00f9",
+        "name": "Get all carts",
+        "cloudant": "3e527677.c86c1a",
+        "database": "carts",
+        "service": "_ext_",
+        "search": "_all_",
+        "design": "",
+        "index": "",
+        "x": 790,
+        "y": 680,
+        "wires": [
+            [
+                "e15cef8f.71bc"
+            ]
+        ]
+    },
+    {
+        "id": "e15cef8f.71bc",
+        "type": "http response",
+        "z": "a7c98f63.a00f9",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 970,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "3a8f1439.209bfc",
+        "type": "inject",
+        "z": "9995b4c2.8d8f68",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3600",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 310,
+        "y": 340,
+        "wires": [
+            [
+                "888db968.093858"
+            ]
+        ]
+    },
+    {
+        "id": "888db968.093858",
+        "type": "http request",
+        "z": "9995b4c2.8d8f68",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://www.metaweather.com/api/location/search/?query=Ho Chi Minh",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 440,
+        "y": 400,
+        "wires": [
+            [
+                "e759e5d1.1a92a8"
+            ]
+        ]
+    },
+    {
+        "id": "e759e5d1.1a92a8",
+        "type": "function",
+        "z": "9995b4c2.8d8f68",
+        "name": "Get woeid of city",
+        "func": "// Get woeid of city\nvar a = JSON.parse(msg.payload);\nmsg.payload = a[0].woeid;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 620,
+        "y": 460,
+        "wires": [
+            [
+                "5e19d00a.47317"
+            ]
+        ]
+    },
+    {
+        "id": "5e19d00a.47317",
+        "type": "http request",
+        "z": "9995b4c2.8d8f68",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://www.metaweather.com/api/location/{{ payload }}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 740,
+        "y": 520,
+        "wires": [
+            [
+                "62ac9f2b.cc064"
+            ]
+        ]
+    },
+    {
+        "id": "22640ab2.cff386",
+        "type": "inject",
+        "z": "9995b4c2.8d8f68",
+        "name": "Create Database",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"q\":\"CREATE DATABASE abc\"}",
+        "payloadType": "json",
+        "x": 340,
+        "y": 60,
+        "wires": [
+            [
+                "d25b5acd.31e488"
+            ]
+        ]
+    },
+    {
+        "id": "d25b5acd.31e488",
+        "type": "http request",
+        "z": "9995b4c2.8d8f68",
+        "name": "Create Database",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://this-influxdb:8086/query?q={{ payload.q }}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 550,
+        "y": 60,
+        "wires": [
+            [
+                "c5b508e6.2bd048"
+            ]
+        ]
+    },
+    {
+        "id": "c5b508e6.2bd048",
+        "type": "debug",
+        "z": "9995b4c2.8d8f68",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 790,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "3eb7b084.82e2e",
+        "type": "inject",
+        "z": "9995b4c2.8d8f68",
+        "name": "Drop Database",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"q\":\"DROP DATABASE abc\"}",
+        "payloadType": "json",
+        "x": 340,
+        "y": 140,
+        "wires": [
+            [
+                "40004167.55c87"
+            ]
+        ]
+    },
+    {
+        "id": "40004167.55c87",
+        "type": "http request",
+        "z": "9995b4c2.8d8f68",
+        "name": "Drop Database",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://this-influxdb:8086/query?q={{ payload.q }}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 540,
+        "y": 140,
+        "wires": [
+            [
+                "63f5c43b.201f5c"
+            ]
+        ]
+    },
+    {
+        "id": "63f5c43b.201f5c",
+        "type": "debug",
+        "z": "9995b4c2.8d8f68",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 790,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "62ac9f2b.cc064",
+        "type": "function",
+        "z": "9995b4c2.8d8f68",
+        "name": "Dump Data",
+        "func": "// Convert to JSON\nfunction escape_string(string) {\n    return string.replace(/\\s/ig,'\\\\ ').replace(/\\,/g,'\\\\,').replace(/\\=/g,'\\\\ =');\n}\n\n// function escape_string(string) {\n//     return string;\n// }\n\n// msg.payload = escape_string(msg.payload.location_type);\n\nvar data = [];\n\nvar sun_rise = new Date(Date.parse(msg.payload.sun_rise)).getTime();\nvar sun_set = new Date(Date.parse(msg.payload.sun_set)).getTime();\n\nvar tags = [\n    `location_type=${escape_string(msg.payload.location_type)}`,\n    `title=${escape_string(msg.payload.title)}`,\n    `latt=${msg.payload.latt_long.split(',')[0]}`,\n    `long=${msg.payload.latt_long.split(',')[1]}`,\n    `country=${escape_string(msg.payload.parent.title)}`,\n    `timezone=${escape_string(msg.payload.timezone)}`\n];\n\n\n// msg.timestamp = timestamp.getTime();\n\n\nmsg.payload.consolidated_weather.forEach(element => {\n  var timestamp = new Date(Date.parse(element.created)).getTime();\n  for (var elem in element) {\n        if (elem === 'weather_state_name') {\n            var measure = elem;\n            // var value = escape_string(element[elem]);\n            var value = '\\\"' + element[elem].toString() + '\\\"';\n            data.push(`${measure},${tags.join(',')} value=${value} ${timestamp}`);\n            continue;\n        }\n        if (elem === 'wind_direction_compass') {\n            measure = elem;\n            // var value = escape_string(element[elem]);\n            value = '\\\"' + element[elem].toString() + '\\\"';\n            data.push(`${measure},${tags.join(',')} value=${value} ${timestamp}`);\n            continue;\n        }\n        if ( elem === 'id' || elem === 'weather_state_abbr') {\n          continue;\n        }\n        if (elem === 'created') {\n          continue;\n        }\n        if (elem === 'applicable_date') {\n            continue;\n        }\n        measure = elem;\n        value = element[elem];\n        data.push(`${measure},${tags.join(',')} value=${value} ${timestamp}`);\n  }\n});\n\nmsg.payload = data.join('\\n');\n// msg.payload = data;\nmsg.db = 'abc';\nmsg.precision = 'ms';\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 970,
+        "y": 520,
+        "wires": [
+            [
+                "892a75f4.d6d118"
+            ]
+        ]
+    },
+    {
+        "id": "39dc1e61.226f62",
+        "type": "debug",
+        "z": "9995b4c2.8d8f68",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "892a75f4.d6d118",
+        "type": "http request",
+        "z": "9995b4c2.8d8f68",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://this-influxdb:8086/write?db={{db}}&precision={{precision}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 1150,
+        "y": 520,
+        "wires": [
+            [
+                "b88431ea.7b28c"
+            ]
+        ]
+    },
+    {
+        "id": "b88431ea.7b28c",
+        "type": "debug",
+        "z": "9995b4c2.8d8f68",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1350,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "24ccbff.c78f34",
+        "type": "inject",
+        "z": "9995b4c2.8d8f68",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "pu_load_short,host=server02,region=us-west value=0.55 1422568543702900257",
+        "payloadType": "str",
+        "x": 320,
+        "y": 220,
+        "wires": [
+            [
+                "94c282c2.d8542"
+            ]
+        ]
+    },
+    {
+        "id": "94c282c2.d8542",
+        "type": "http request",
+        "z": "9995b4c2.8d8f68",
+        "name": "Add Database",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://this-influxdb:8086/write?db=abc&precision=ns",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 540,
+        "y": 220,
+        "wires": [
+            [
+                "39dc1e61.226f62"
+            ]
+        ]
+    },
+    {
+        "id": "308ec68a.21c22a",
+        "type": "debug",
+        "z": "9995b4c2.8d8f68",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1200,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "27df3d09.1cf012",
+        "type": "function",
+        "z": "9995b4c2.8d8f68",
+        "name": "Sunset-Sunrise",
+        "func": "function escape_string(string) {\n    return string.replace(/\\s/ig,'\\\\ ').replace(/\\,/g,'\\\\,').replace(/\\=/g,'\\\\ =');\n}\n\nvar sun_rise = new Date(Date.parse(msg.payload.sun_rise)).getTime();\nvar sun_set = new Date(Date.parse(msg.payload.sun_set)).getTime();\nvar timestamp = new Date(Date.parse(msg.payload.time)).getTime();\nvar data = [];\n\nvar tags = [\n    `location_type=${escape_string(msg.payload.location_type)}`,\n    `title=${escape_string(msg.payload.title)}`,\n    `latt=${msg.payload.latt_long.split(',')[0]}`,\n    `long=${msg.payload.latt_long.split(',')[1]}`,\n    `country=${escape_string(msg.payload.parent.title)}`,\n    `timezone=${escape_string(msg.payload.timezone)}`\n];\n\nvar measure = 'sun_rise';\nvalue = sun_rise;\ndata.push(`${measure},${tags.join(',')} value=${value} ${timestamp}`);\nmeasure = 'sun_set';\nvalue = sun_set;\ndata.push(`${measure},${tags.join(',')} value=${value} ${timestamp}`);\n\nmsg.payload = data.join('\\n');\nmsg.db = 'abc';\nmsg.precision = 'ms';\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 880,
+        "y": 700,
+        "wires": [
+            [
+                "905a12ec.25572"
+            ]
+        ]
+    },
+    {
+        "id": "905a12ec.25572",
+        "type": "http request",
+        "z": "9995b4c2.8d8f68",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://this-influxdb:8086/write?db={{db}}&precision={{precision}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 990,
+        "y": 640,
+        "wires": [
+            [
+                "308ec68a.21c22a"
+            ]
+        ]
+    },
+    {
+        "id": "9553bdae.5faf9",
+        "type": "inject",
+        "z": "9995b4c2.8d8f68",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "86400",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 310,
+        "y": 600,
+        "wires": [
+            [
+                "d716955.7fb1568"
+            ]
+        ]
+    },
+    {
+        "id": "d716955.7fb1568",
+        "type": "http request",
+        "z": "9995b4c2.8d8f68",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://www.metaweather.com/api/location/search/?query=Ho Chi Minh",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 440,
+        "y": 660,
+        "wires": [
+            [
+                "703edfd0.c84f9"
+            ]
+        ]
+    },
+    {
+        "id": "703edfd0.c84f9",
+        "type": "function",
+        "z": "9995b4c2.8d8f68",
+        "name": "Get woeid of city",
+        "func": "// Get woeid of city\nvar a = JSON.parse(msg.payload);\nmsg.payload = a[0].woeid;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 620,
+        "y": 720,
+        "wires": [
+            [
+                "5cb54a44.98cfa4"
+            ]
+        ]
+    },
+    {
+        "id": "5cb54a44.98cfa4",
+        "type": "http request",
+        "z": "9995b4c2.8d8f68",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://www.metaweather.com/api/location/{{ payload }}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 740,
+        "y": 780,
+        "wires": [
+            [
+                "27df3d09.1cf012"
+            ]
+        ]
+    },
+    {
+        "id": "d4936752.05c458",
+        "type": "inject",
+        "z": "3dd13241.f528fe",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 360,
+        "y": 180,
+        "wires": [
+            [
+                "b8273aa3.120f08"
+            ]
+        ]
+    },
+    {
+        "id": "b8273aa3.120f08",
+        "type": "debug",
+        "z": "3dd13241.f528fe",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "437298ec.cf6b88",
+        "type": "function",
+        "z": "a7c98f63.a00f9",
+        "name": "",
+        "func": "const token = msg.payload.token;\nconst API_TOKEN = 'D6W69PRgCoDKgHZGJmRUNA';\n\nif (token) {\n    if (token === API_TOKEN) {\n    } else {\n        msg.payload = {\n            \"success\": false,\n            \"error\": \"Invalid token provided\"\n        };\n    } \n} else {\n    msg.payload = {\n        success: false,\n        error: 'No token provided. Supply token as query param `token`'\n    };\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 620,
+        "y": 360,
+        "wires": [
+            [
+                "4ee6912d.354a"
+            ]
+        ]
+    },
+    {
+        "id": "4ee6912d.354a",
+        "type": "switch",
+        "z": "a7c98f63.a00f9",
+        "name": "Success?",
+        "property": "payload.success",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "null"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 600,
+        "y": 460,
+        "wires": [
+            [
+                "1ac1de09.edcc52"
+            ],
+            [
+                "82983629.47b188"
+            ]
+        ]
+    },
+    {
+        "id": "82983629.47b188",
+        "type": "change",
+        "z": "a7c98f63.a00f9",
+        "name": "Set 403 response",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "statusCode",
+                "pt": "msg",
+                "to": "403",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 790,
+        "y": 500,
+        "wires": [
+            [
+                "dac1f5f9.79ded8"
+            ]
+        ]
+    },
+    {
+        "id": "dac1f5f9.79ded8",
+        "type": "http response",
+        "z": "a7c98f63.a00f9",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 970,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "771fd0dd.5cc9c",
+        "type": "function",
+        "z": "a7c98f63.a00f9",
+        "name": "",
+        "func": "const token = msg.payload.token;\nconst API_TOKEN = 'D6W69PRgCoDKgHZGJmRUNA';\n\nif (token) {\n    if (token === API_TOKEN) {\n    } else {\n        msg.payload = {\n            \"success\": false,\n            \"error\": \"Invalid token provided\"\n        };\n    } \n} else {\n    msg.payload = {\n        success: false,\n        error: 'No token provided. Supply token as query param `token`'\n    };\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 600,
+        "y": 620,
+        "wires": [
+            [
+                "f64537e2.dda748"
+            ]
+        ]
+    },
+    {
+        "id": "f64537e2.dda748",
+        "type": "switch",
+        "z": "a7c98f63.a00f9",
+        "name": "Success?",
+        "property": "payload.success",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "null"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 580,
+        "y": 720,
+        "wires": [
+            [
+                "d0ca95f9.6e7c08"
+            ],
+            [
+                "c68c27dc.c9e398"
+            ]
+        ]
+    },
+    {
+        "id": "c68c27dc.c9e398",
+        "type": "change",
+        "z": "a7c98f63.a00f9",
+        "name": "Set 403 response",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "statusCode",
+                "pt": "msg",
+                "to": "403",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 770,
+        "y": 760,
+        "wires": [
+            [
+                "c44617e9.59f8e8"
+            ]
+        ]
+    },
+    {
+        "id": "c44617e9.59f8e8",
+        "type": "http response",
+        "z": "a7c98f63.a00f9",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 950,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "7ffa8b93.098334",
+        "type": "link out",
+        "z": "a7c98f63.a00f9",
+        "name": "",
+        "links": [],
+        "x": 995,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "922bfd86.ce10c",
+        "type": "switch",
+        "z": "a7c98f63.a00f9",
+        "name": "Success?",
+        "property": "payload.ok",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1000,
+        "y": 980,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "9491933d.a66a9",
         "type": "debug",
         "z": "a7c98f63.a00f9",
         "name": "",
@@ -1874,8 +2759,44 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1010,
-        "y": 580,
+        "x": 1570,
+        "y": 960,
         "wires": []
+    },
+    {
+        "id": "7350a2c.c11e45c",
+        "type": "http response",
+        "z": "a7c98f63.a00f9",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1470,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "b8ca8c44.246dc",
+        "type": "switch",
+        "z": "a7c98f63.a00f9",
+        "name": "Success?",
+        "property": "payload.ok",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1000,
+        "y": 920,
+        "wires": [
+            [],
+            []
+        ]
     }
 ]
