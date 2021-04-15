@@ -107,6 +107,11 @@
         "name": ""
     },
     {
+        "id": "3098618a.0c745e",
+        "type": "slack-config",
+        "name": "packt-bot"
+    },
+    {
         "id": "9e747482.d4c2a8",
         "type": "http in",
         "z": "81389382.5c507",
@@ -2502,31 +2507,15 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 360,
+        "payload": "AFG",
+        "payloadType": "str",
+        "x": 350,
         "y": 180,
         "wires": [
             [
-                "b8273aa3.120f08"
+                "4bbebcdb.b36ff4"
             ]
         ]
-    },
-    {
-        "id": "b8273aa3.120f08",
-        "type": "debug",
-        "z": "3dd13241.f528fe",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 560,
-        "y": 180,
-        "wires": []
     },
     {
         "id": "437298ec.cf6b88",
@@ -2798,5 +2787,147 @@
             [],
             []
         ]
+    },
+    {
+        "id": "31e4de3d.fd6842",
+        "type": "slack-rtm-in",
+        "z": "3dd13241.f528fe",
+        "client": "3098618a.0c745e",
+        "name": "",
+        "events": "",
+        "x": 360,
+        "y": 340,
+        "wires": [
+            [
+                "57e1dce7.52c2d4"
+            ]
+        ]
+    },
+    {
+        "id": "57e1dce7.52c2d4",
+        "type": "function",
+        "z": "3dd13241.f528fe",
+        "name": "",
+        "func": "global.set(\"channel\",msg.payload.channel);\n\nmsg.topic = \"message\";\nmsg.payload = msg.payload.text;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 520,
+        "y": 340,
+        "wires": [
+            [
+                "b79ccda3.7c5c"
+            ]
+        ]
+    },
+    {
+        "id": "b79ccda3.7c5c",
+        "type": "watson-conversation-v1",
+        "z": "3dd13241.f528fe",
+        "name": "",
+        "workspaceid": "5089314d-0838-4c72-a190-afa726f8eecd",
+        "multiuser": false,
+        "context": true,
+        "empty-payload": false,
+        "service-endpoint": "https://api.us-south.assistant.watson.cloud.ibm.com/instances/66fea991-f64d-4873-8164-72641dd9ffe0",
+        "timeout": "",
+        "optout-learning": false,
+        "x": 570,
+        "y": 420,
+        "wires": [
+            [
+                "b9b32cb9.88ee9"
+            ]
+        ]
+    },
+    {
+        "id": "b9b32cb9.88ee9",
+        "type": "function",
+        "z": "3dd13241.f528fe",
+        "name": "",
+        "func": "var g_channel=global.get(\"channel\");\n\nmsg.topic = \"message\";\nmsg.payload = {\n    channel: g_channel,\n    text: msg.payload.output.text[0]\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 740,
+        "y": 420,
+        "wires": [
+            [
+                "feb9962b.095ee8"
+            ]
+        ]
+    },
+    {
+        "id": "feb9962b.095ee8",
+        "type": "slack-rtm-out",
+        "z": "3dd13241.f528fe",
+        "client": "3098618a.0c745e",
+        "name": "",
+        "x": 840,
+        "y": 500,
+        "wires": [
+            [
+                "a7d9e06.376492"
+            ]
+        ]
+    },
+    {
+        "id": "a7d9e06.376492",
+        "type": "debug",
+        "z": "3dd13241.f528fe",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1010,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "b5f3bff1.911ad",
+        "type": "comment",
+        "z": "3dd13241.f528fe",
+        "name": "How to test your own node in a local environment",
+        "info": "`npm install work/contrib-taiponrock/`",
+        "x": 460,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "4bbebcdb.b36ff4",
+        "type": "lower-case",
+        "z": "3dd13241.f528fe",
+        "name": "",
+        "x": 540,
+        "y": 180,
+        "wires": [
+            [
+                "22dbe7c.93f9018"
+            ]
+        ]
+    },
+    {
+        "id": "22dbe7c.93f9018",
+        "type": "debug",
+        "z": "3dd13241.f528fe",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 750,
+        "y": 180,
+        "wires": []
     }
 ]
