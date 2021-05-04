@@ -35,6 +35,13 @@
         "info": ""
     },
     {
+        "id": "dbc1b5ab.abe0a8",
+        "type": "tab",
+        "label": "api dashboard",
+        "disabled": false,
+        "info": ""
+    },
+    {
         "id": "19d38fbf.a18f6",
         "type": "subflow",
         "name": "Get ToDo",
@@ -1173,8 +1180,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 530,
-        "y": 160,
+        "x": 510,
+        "y": 140,
         "wires": []
     },
     {
@@ -2489,35 +2496,6 @@
         ]
     },
     {
-        "id": "d4936752.05c458",
-        "type": "inject",
-        "z": "3dd13241.f528fe",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "AFG",
-        "payloadType": "str",
-        "x": 350,
-        "y": 180,
-        "wires": [
-            [
-                "4bbebcdb.b36ff4"
-            ]
-        ]
-    },
-    {
         "id": "437298ec.cf6b88",
         "type": "function",
         "z": "a7c98f63.a00f9",
@@ -2901,15 +2879,31 @@
         "wires": []
     },
     {
-        "id": "4bbebcdb.b36ff4",
-        "type": "lower-case",
+        "id": "d4936752.05c458",
+        "type": "inject",
         "z": "3dd13241.f528fe",
         "name": "",
-        "x": 540,
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "AFG",
+        "payloadType": "str",
+        "x": 350,
         "y": 180,
         "wires": [
             [
-                "22dbe7c.93f9018"
+                "d161153a.b55538"
             ]
         ]
     },
@@ -2929,5 +2923,319 @@
         "x": 750,
         "y": 180,
         "wires": []
+    },
+    {
+        "id": "d161153a.b55538",
+        "type": "taiponrock",
+        "z": "3dd13241.f528fe",
+        "name": "",
+        "x": 530,
+        "y": 180,
+        "wires": [
+            [
+                "22dbe7c.93f9018"
+            ]
+        ]
+    },
+    {
+        "id": "2add0266.54997e",
+        "type": "inject",
+        "z": "dbc1b5ab.abe0a8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[{\"Floor 1st\":null,\"Floor 2nd\":null,\"time\":\"2021-04-01\",\"value\":null},{\"Floor 1st\":null,\"Floor 2nd\":null,\"time\":\"2021-04-02\",\"value\":null},{\"Floor 1st\":null,\"Floor 2nd\":null,\"time\":\"2021-04-03\",\"value\":null},{\"Floor 1st\":null,\"Floor 2nd\":null,\"time\":\"2021-04-04\",\"value\":null},{\"Floor 1st\":null,\"Floor 2nd\":null,\"time\":\"2021-04-05\",\"value\":null},{\"Floor 1st\":null,\"Floor 2nd\":null,\"time\":\"2021-04-06\",\"value\":null},{\"Floor 1st\":null,\"Floor 2nd\":null,\"time\":\"2021-04-07\",\"value\":null},{\"Floor 1st\":null,\"Floor 2nd\":null,\"time\":\"2021-04-08\",\"value\":null},{\"Floor 1st\":null,\"Floor 2nd\":null,\"time\":\"2021-04-09\",\"value\":null},{\"Floor 1st\":null,\"Floor 2nd\":null,\"time\":\"2021-04-10\",\"value\":null},{\"Floor 1st\":null,\"Floor 2nd\":null,\"time\":\"2021-04-11\",\"value\":null},{\"Floor 1st\":null,\"Floor 2nd\":null,\"time\":\"2021-04-12\",\"value\":null},{\"Floor 1st\":null,\"Floor 2nd\":null,\"time\":\"2021-04-13\",\"value\":null},{\"Floor 1st\":null,\"Floor 2nd\":null,\"time\":\"2021-04-14\",\"value\":null},{\"Floor 1st\":null,\"Floor 2nd\":null,\"time\":\"2021-04-15\",\"value\":null},{\"Floor 1st\":null,\"Floor 2nd\":null,\"time\":\"2021-04-16\",\"value\":null},{\"Floor 1st\":null,\"Floor 2nd\":null,\"time\":\"2021-04-17\",\"value\":null},{\"Floor 1st\":null,\"Floor 2nd\":null,\"time\":\"2021-04-18\",\"value\":null},{\"Floor 1st\":null,\"Floor 2nd\":null,\"time\":\"2021-04-19\",\"value\":null},{\"Floor 1st\":1745,\"Floor 2nd\":1745,\"time\":\"2021-04-20\",\"value\":1745},{\"Floor 1st\":3600,\"Floor 2nd\":3600,\"time\":\"2021-04-21\",\"value\":3600},{\"Floor 1st\":3599,\"Floor 2nd\":1886,\"time\":\"2021-04-22\",\"value\":3599},{\"Floor 1st\":3601,\"Floor 2nd\":null,\"time\":\"2021-04-23\",\"value\":3601},{\"Floor 1st\":3600,\"Floor 2nd\":null,\"time\":\"2021-04-24\",\"value\":3600},{\"Floor 1st\":3600,\"Floor 2nd\":null,\"time\":\"2021-04-25\",\"value\":3600},{\"Floor 1st\":2165,\"Floor 2nd\":null,\"time\":\"2021-04-26\",\"value\":2165},{\"Floor 1st\":null,\"Floor 2nd\":null,\"time\":\"2021-04-27\",\"value\":null},{\"Floor 1st\":null,\"Floor 2nd\":null,\"time\":\"2021-04-28\",\"value\":null},{\"Floor 1st\":null,\"Floor 2nd\":null,\"time\":\"2021-04-29\",\"value\":null},{\"Floor 1st\":null,\"Floor 2nd\":null,\"time\":\"2021-04-30\",\"value\":null}]",
+        "payloadType": "json",
+        "x": 370,
+        "y": 200,
+        "wires": [
+            [
+                "40362c37.d29e74"
+            ]
+        ]
+    },
+    {
+        "id": "52c585d2.b7817c",
+        "type": "debug",
+        "z": "dbc1b5ab.abe0a8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1010,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "40362c37.d29e74",
+        "type": "function",
+        "z": "dbc1b5ab.abe0a8",
+        "name": "",
+        "func": "var a = 0;\nvar b = 0;\nvar labels = [];\nvar datasets = [];\nvar data = [];\nvar data1 = [];\nvar assets = [{\"name\":\"Floor 1st\",\"id\":\"61bb03d0-a194-11eb-b183-93740c0d79ca\"},{\"name\":\"Floor 2nd\",\"id\":\"9085ed60-a194-11eb-b183-93740c0d79ca\"}];\nvar backgroundColor = ['#ff6384', '#36a2eb', '#cc65fe'];\nvar count = 0;\n// for (let i in msg.payload) {\n//     a += msg.payload[i].value;\n//     labels.push(msg.payload[i].time);\n// }\nassets.forEach(elem => {\n    datasets.push({\n        label: elem.name,\n        data: [],\n    });\n})\n\nmsg.payload.map(elem => {\n    var other = elem.value * 3;\n    for (let e in elem) {\n        if (e !== 'time' && e !== 'value') {\n            other = other - elem[e];\n        }\n    }\n    elem.other = other;\n    return elem;\n})\n\nmsg.payload.forEach(elem => {\n    a += elem.value;\n    labels.push(elem.time);\n    datasets.forEach(e => {\n        e.data.push(elem[e.label]);\n        e.barPercentage = 0.5;\n    })\n    data.push(elem.other);\n});\n\ndatasets.push({\n    label: 'Other',\n    data: data,\n});\n\nfor (let i=0; i<datasets.length; i++) {\n    datasets[i].backgroundColor = backgroundColor[i];\n}\n\nmsg.abc = a;\nmsg.labels = labels;\nmsg.datasets = datasets;\nmsg.assets = assets;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 580,
+        "y": 220,
+        "wires": [
+            [
+                "aa7da246.d9e5d"
+            ]
+        ]
+    },
+    {
+        "id": "ae4df853.d90618",
+        "type": "debug",
+        "z": "dbc1b5ab.abe0a8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 770,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "aa7da246.d9e5d",
+        "type": "function",
+        "z": "dbc1b5ab.abe0a8",
+        "name": "",
+        "func": "msg.labels = [];\nvar a = [];\nvar dataLegendCharts = [];\nvar count = 0;\nconst reducer = (accumulator, currentValue) => accumulator + currentValue;\nmsg.datasets.forEach(elem => {\n    msg.labels.push(elem.label);\n    a.push(elem.data.reduce(reducer))\n    elem.data.forEach(e => {\n        if (e === null) return;\n        count += 1;\n    })\n    dataLegendCharts.push({\n        text: elem.label,\n        min: Math.min.apply(null, elem.data),\n        max: Math.max.apply(null, elem.data),\n        total: elem.data.reduce(reducer),\n        average: Math.floor(elem.data.reduce(reducer)/count*100, 2)/100\n    });\n})\n\na = a.map(elem => {\n    return Math.round(elem/a.reduce(reducer)*100, 2);\n});\n\nmsg.a = a;\nmsg.dataLegendCharts = dataLegendCharts;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 780,
+        "y": 220,
+        "wires": [
+            [
+                "52c585d2.b7817c"
+            ]
+        ]
+    },
+    {
+        "id": "645a2393.49580c",
+        "type": "inject",
+        "z": "dbc1b5ab.abe0a8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[{\"normalConsumption\":null,\"offPeakConsumption\":null,\"peakConsumption\":null,\"time\":\"2021-01\"},{\"normalConsumption\":null,\"offPeakConsumption\":null,\"peakConsumption\":null,\"time\":\"2021-02\"},{\"normalConsumption\":null,\"offPeakConsumption\":null,\"peakConsumption\":null,\"time\":\"2021-03\"},{\"normalConsumption\":13773,\"offPeakConsumption\":9866,\"peakConsumption\":5034,\"time\":\"2021-04\"},{\"normalConsumption\":null,\"offPeakConsumption\":null,\"peakConsumption\":null,\"time\":\"2021-05\"},{\"normalConsumption\":null,\"offPeakConsumption\":null,\"peakConsumption\":null,\"time\":\"2021-06\"},{\"normalConsumption\":null,\"offPeakConsumption\":null,\"peakConsumption\":null,\"time\":\"2021-07\"},{\"normalConsumption\":null,\"offPeakConsumption\":null,\"peakConsumption\":null,\"time\":\"2021-08\"},{\"normalConsumption\":null,\"offPeakConsumption\":null,\"peakConsumption\":null,\"time\":\"2021-09\"},{\"normalConsumption\":null,\"offPeakConsumption\":null,\"peakConsumption\":null,\"time\":\"2021-10\"},{\"normalConsumption\":null,\"offPeakConsumption\":null,\"peakConsumption\":null,\"time\":\"2021-11\"},{\"normalConsumption\":null,\"offPeakConsumption\":null,\"peakConsumption\":null,\"time\":\"2021-12\"}]",
+        "payloadType": "json",
+        "x": 380,
+        "y": 300,
+        "wires": [
+            [
+                "1808b380.c5703d"
+            ]
+        ]
+    },
+    {
+        "id": "1808b380.c5703d",
+        "type": "function",
+        "z": "dbc1b5ab.abe0a8",
+        "name": "",
+        "func": "var method = 'byTime';\nvar prices = [\n    {\n        name: 'Peak',\n        price: 2817\n    },\n    {\n        name: 'Off-peak',\n        price: 989\n    },\n    {\n        name: 'Normal',\n        price: 1526\n    },\n];\nvar total = 0;\nvar temp = 0;\nvar price = {};\n\nprices.forEach(elem => {\n    price[elem.name] = elem.price\n})\n\nif (method === 'byTime') {\n    msg.payload.forEach(elem => {\n        temp = elem.normalConsumption*price['Normal'] +\n               elem.offPeakConsumption*price['Off-peak'] +\n               elem.peakConsumption*price['Peak'];\n        total += temp;\n    })\n}\nmsg.total = total;\nmsg.prices = price;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 560,
+        "y": 300,
+        "wires": [
+            [
+                "ae4df853.d90618"
+            ]
+        ]
+    },
+    {
+        "id": "b7d91eb0.88fce",
+        "type": "inject",
+        "z": "dbc1b5ab.abe0a8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[{\"time\":\"04-01\",\"value\":null},{\"time\":\"04-02\",\"value\":null},{\"time\":\"04-03\",\"value\":null},{\"time\":\"04-04\",\"value\":null},{\"time\":\"04-05\",\"value\":null},{\"time\":\"04-06\",\"value\":null},{\"time\":\"04-07\",\"value\":null},{\"time\":\"04-08\",\"value\":null},{\"time\":\"04-09\",\"value\":null},{\"time\":\"04-10\",\"value\":null},{\"time\":\"04-11\",\"value\":null},{\"time\":\"04-12\",\"value\":null},{\"time\":\"04-13\",\"value\":null},{\"time\":\"04-14\",\"value\":null},{\"time\":\"04-15\",\"value\":null},{\"time\":\"04-16\",\"value\":null},{\"time\":\"04-17\",\"value\":null},{\"time\":\"04-18\",\"value\":null},{\"time\":\"04-19\",\"value\":null},{\"time\":\"04-20\",\"value\":1745},{\"time\":\"04-21\",\"value\":3600},{\"time\":\"04-22\",\"value\":3599},{\"time\":\"04-23\",\"value\":3601},{\"time\":\"04-24\",\"value\":3600},{\"time\":\"04-25\",\"value\":3600},{\"time\":\"04-26\",\"value\":3600},{\"time\":\"04-27\",\"value\":3600},{\"time\":\"04-28\",\"value\":2195},{\"time\":\"04-29\",\"value\":null},{\"time\":\"04-30\",\"value\":null}]",
+        "payloadType": "json",
+        "x": 390,
+        "y": 360,
+        "wires": [
+            [
+                "848078d.2ae3888"
+            ]
+        ]
+    },
+    {
+        "id": "2f0cda51.2b69e6",
+        "type": "debug",
+        "z": "dbc1b5ab.abe0a8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "848078d.2ae3888",
+        "type": "function",
+        "z": "dbc1b5ab.abe0a8",
+        "name": "",
+        "func": "var data = msg.payload;\nvar rs = []\nrs = data.map(i => {\n    var x = {};\n    x.time = i.time;\n    x.level_1 = ((i.value>=0)&&(i.value-0)-(i.value>=50)&&(i.value-50));\n    x.level_2 = ((i.value>=50)&&(i.value-50)-(i.value>=100)&&(i.value-100));\n    x.level_3 = ((i.value>=100)&&(i.value-100)-(i.value>=200)&&(i.value-200));\n    x.level_4 = ((i.value>=200)&&(i.value-200)-(i.value>=300)&&(i.value-300));\n    x.level_5 = ((i.value>=300)&&(i.value-300)-(i.value>=400)&&(i.value-400));\n    x.level_6 = ((i.value>=400)&&(i.value-400));\n    return x;\n})\nmsg.payload = rs;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 570,
+        "y": 360,
+        "wires": [
+            [
+                "2f0cda51.2b69e6"
+            ]
+        ]
+    },
+    {
+        "id": "8f6af639.afedb8",
+        "type": "inject",
+        "z": "dbc1b5ab.abe0a8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[{\"normalConsumption\":1950,\"offPeakConsumption\":900,\"peakConsumption\":750,\"time\":\"2021-05-01\"},{\"normalConsumption\":1950,\"offPeakConsumption\":900,\"peakConsumption\":750,\"time\":\"2021-05-02\"},{\"normalConsumption\":1950,\"offPeakConsumption\":900,\"peakConsumption\":750,\"time\":\"2021-05-03\"},{\"normalConsumption\":1222,\"offPeakConsumption\":600,\"peakConsumption\":300,\"time\":\"2021-05-04\"},{\"normalConsumption\":null,\"offPeakConsumption\":null,\"peakConsumption\":null,\"time\":\"2021-05-05\"},{\"normalConsumption\":null,\"offPeakConsumption\":null,\"peakConsumption\":null,\"time\":\"2021-05-06\"},{\"normalConsumption\":null,\"offPeakConsumption\":null,\"peakConsumption\":null,\"time\":\"2021-05-07\"},{\"normalConsumption\":null,\"offPeakConsumption\":null,\"peakConsumption\":null,\"time\":\"2021-05-08\"},{\"normalConsumption\":null,\"offPeakConsumption\":null,\"peakConsumption\":null,\"time\":\"2021-05-09\"},{\"normalConsumption\":null,\"offPeakConsumption\":null,\"peakConsumption\":null,\"time\":\"2021-05-10\"},{\"normalConsumption\":null,\"offPeakConsumption\":null,\"peakConsumption\":null,\"time\":\"2021-05-11\"},{\"normalConsumption\":null,\"offPeakConsumption\":null,\"peakConsumption\":null,\"time\":\"2021-05-12\"},{\"normalConsumption\":null,\"offPeakConsumption\":null,\"peakConsumption\":null,\"time\":\"2021-05-13\"},{\"normalConsumption\":null,\"offPeakConsumption\":null,\"peakConsumption\":null,\"time\":\"2021-05-14\"},{\"normalConsumption\":null,\"offPeakConsumption\":null,\"peakConsumption\":null,\"time\":\"2021-05-15\"},{\"normalConsumption\":null,\"offPeakConsumption\":null,\"peakConsumption\":null,\"time\":\"2021-05-16\"},{\"normalConsumption\":null,\"offPeakConsumption\":null,\"peakConsumption\":null,\"time\":\"2021-05-17\"},{\"normalConsumption\":null,\"offPeakConsumption\":null,\"peakConsumption\":null,\"time\":\"2021-05-18\"},{\"normalConsumption\":null,\"offPeakConsumption\":null,\"peakConsumption\":null,\"time\":\"2021-05-19\"},{\"normalConsumption\":null,\"offPeakConsumption\":null,\"peakConsumption\":null,\"time\":\"2021-05-20\"},{\"normalConsumption\":null,\"offPeakConsumption\":null,\"peakConsumption\":null,\"time\":\"2021-05-21\"},{\"normalConsumption\":null,\"offPeakConsumption\":null,\"peakConsumption\":null,\"time\":\"2021-05-22\"},{\"normalConsumption\":null,\"offPeakConsumption\":null,\"peakConsumption\":null,\"time\":\"2021-05-23\"},{\"normalConsumption\":null,\"offPeakConsumption\":null,\"peakConsumption\":null,\"time\":\"2021-05-24\"},{\"normalConsumption\":null,\"offPeakConsumption\":null,\"peakConsumption\":null,\"time\":\"2021-05-25\"},{\"normalConsumption\":null,\"offPeakConsumption\":null,\"peakConsumption\":null,\"time\":\"2021-05-26\"},{\"normalConsumption\":null,\"offPeakConsumption\":null,\"peakConsumption\":null,\"time\":\"2021-05-27\"},{\"normalConsumption\":null,\"offPeakConsumption\":null,\"peakConsumption\":null,\"time\":\"2021-05-28\"},{\"normalConsumption\":null,\"offPeakConsumption\":null,\"peakConsumption\":null,\"time\":\"2021-05-29\"},{\"normalConsumption\":null,\"offPeakConsumption\":null,\"peakConsumption\":null,\"time\":\"2021-05-30\"},{\"normalConsumption\":null,\"offPeakConsumption\":null,\"peakConsumption\":null,\"time\":\"2021-05-31\"}]",
+        "payloadType": "json",
+        "x": 380,
+        "y": 480,
+        "wires": [
+            [
+                "41740849.96da68"
+            ]
+        ]
+    },
+    {
+        "id": "3410fa26.4e0bf6",
+        "type": "debug",
+        "z": "dbc1b5ab.abe0a8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 770,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "41740849.96da68",
+        "type": "function",
+        "z": "dbc1b5ab.abe0a8",
+        "name": "",
+        "func": "const prices = {\"Peak\":2817,\"Off-peak\":989,\"Normal\":1526};\nconst reducer = (accumulator, currentValue) => accumulator + currentValue;\nvar timestamp = new Date().toLocaleDateString();\nvar barChartDatasets = [];\nvar barChartLabels = [];\nvar pieChartLabels = [];\nvar pieChartDatasets = [];\nvar data = [];\nvar monthCost = 0;\nvar todayCost = 0;\nconst backgroundColor= [\n    '#ff6384', '#36a2eb', '#cc65fe',\n    '#ffce56', '#1f77b4', '#ff7f0e',\n    '#2ca02c', '#17becf', '#7f7f7f'];\n    \nfor (let p in prices) {\n    pieChartLabels.push(p);\n}\n\npieChartLabels.forEach(elem => {\n    barChartDatasets.push({\n        label: elem,\n        data: [],\n        barPercentage: 0.5\n    })\n})\n\nmsg.payload.forEach(elem => {\n    barChartLabels.push(elem.time);\n    barChartDatasets.forEach(e => {\n        if (e.label === 'Peak') {\n            e.data.push(elem.peakConsumption);\n        } else if (e.label === 'Off-peak') {\n            e.data.push(elem.offPeakConsumption);\n        } else if (e.label === 'Normal') {\n            e.data.push(elem.normalConsumption);\n        }\n    })\n})\n\nfor (let i=0; i<barChartDatasets.length; i++) {\n    barChartDatasets[i].backgroudColor = backgroundColor[i];\n}\n\nbarChartDatasets.forEach(elem => {\n    data.push(elem.data.reduce(reducer));\n})\n\n\n\nfor (let i in data) {\n    monthCost += data[i]*prices[pieChartLabels[i]];\n}\n\nmsg.payload.forEach(elem => {\n    if (Number(elem.time.slice(-2)) == timestamp[2]) {\n        todayCost = elem.normalConsumption*prices[\"Normal\"] +\n                    elem.offPeakConsumption*prices[\"Off-peak\"] +\n                    elem.peakConsumption*prices[\"Peak\"];\n    }\n})\n\ndata = data.map(elem => {\n    return Math.floor(elem/data.reduce(reducer)*10000)/100;\n})\n\npieChartDatasets.push({\n    backgroundColor: backgroundColor,\n    data: data\n})\n\nmsg.labels = pieChartLabels;\nmsg.barChartDatasets = barChartDatasets;\nmsg.barChartLabels = barChartLabels;\nmsg.pieChartLabels = pieChartLabels;\nmsg.pieChartDatasets = pieChartDatasets;\nmsg.todayCost = todayCost;\nmsg.monthCost = monthCost;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 550,
+        "y": 480,
+        "wires": [
+            [
+                "3410fa26.4e0bf6"
+            ]
+        ]
+    },
+    {
+        "id": "d90ffdd6.a6d67",
+        "type": "inject",
+        "z": "dbc1b5ab.abe0a8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[{\"time\":\"05-01\",\"level1\":50,\"level2\":50,\"level3\":100,\"level4\":100,\"level5\":100,\"level6\":3200},{\"time\":\"05-02\",\"level6\":3600},{\"time\":\"05-03\",\"level6\":3600},{\"time\":\"05-04\",\"level6\":2482},{\"time\":\"05-05\",\"level6\":null},{\"time\":\"05-06\",\"level6\":null},{\"time\":\"05-07\",\"level6\":null},{\"time\":\"05-08\",\"level6\":null},{\"time\":\"05-09\",\"value\":null},{\"time\":\"05-10\",\"value\":null},{\"time\":\"05-11\",\"value\":null},{\"time\":\"05-12\",\"value\":null},{\"time\":\"05-13\",\"value\":null},{\"time\":\"05-14\",\"value\":null},{\"time\":\"05-15\",\"value\":null},{\"time\":\"05-16\",\"value\":null},{\"time\":\"05-17\",\"value\":null},{\"time\":\"05-18\",\"value\":null},{\"time\":\"05-19\",\"value\":null},{\"time\":\"05-20\",\"value\":null},{\"time\":\"05-21\",\"value\":null},{\"time\":\"05-22\",\"value\":null},{\"time\":\"05-23\",\"value\":null},{\"time\":\"05-24\",\"value\":null},{\"time\":\"05-25\",\"value\":null},{\"time\":\"05-26\",\"value\":null},{\"time\":\"05-27\",\"value\":null},{\"time\":\"05-28\",\"value\":null},{\"time\":\"05-29\",\"value\":null},{\"time\":\"05-30\",\"value\":null},{\"time\":\"05-31\",\"value\":null}]",
+        "payloadType": "json",
+        "x": 500,
+        "y": 580,
+        "wires": [
+            []
+        ]
     }
 ]
