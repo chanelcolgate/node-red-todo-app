@@ -28,6 +28,13 @@
         "info": ""
     },
     {
+        "id": "b37d6511.b0cd18",
+        "type": "tab",
+        "label": "Savina",
+        "disabled": false,
+        "info": ""
+    },
+    {
         "id": "3dd13241.f528fe",
         "type": "tab",
         "label": "Flow 1",
@@ -117,6 +124,41 @@
         "id": "3098618a.0c745e",
         "type": "slack-config",
         "name": "packt-bot"
+    },
+    {
+        "id": "4aea6191.9fe73",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "192.168.1.25",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "70b5a5fa.0c0d1c",
+        "type": "influxdb",
+        "hostname": "this-influxdb",
+        "port": "8086",
+        "protocol": "http",
+        "database": "solar",
+        "name": "",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "1.x",
+        "url": "http://localhost:8086",
+        "rejectUnauthorized": true
     },
     {
         "id": "9e747482.d4c2a8",
@@ -3230,12 +3272,1173 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "[{\"time\":\"05-01\",\"level1\":50,\"level2\":50,\"level3\":100,\"level4\":100,\"level5\":100,\"level6\":3200},{\"time\":\"05-02\",\"level6\":3600},{\"time\":\"05-03\",\"level6\":3600},{\"time\":\"05-04\",\"level6\":2482},{\"time\":\"05-05\",\"level6\":null},{\"time\":\"05-06\",\"level6\":null},{\"time\":\"05-07\",\"level6\":null},{\"time\":\"05-08\",\"level6\":null},{\"time\":\"05-09\",\"value\":null},{\"time\":\"05-10\",\"value\":null},{\"time\":\"05-11\",\"value\":null},{\"time\":\"05-12\",\"value\":null},{\"time\":\"05-13\",\"value\":null},{\"time\":\"05-14\",\"value\":null},{\"time\":\"05-15\",\"value\":null},{\"time\":\"05-16\",\"value\":null},{\"time\":\"05-17\",\"value\":null},{\"time\":\"05-18\",\"value\":null},{\"time\":\"05-19\",\"value\":null},{\"time\":\"05-20\",\"value\":null},{\"time\":\"05-21\",\"value\":null},{\"time\":\"05-22\",\"value\":null},{\"time\":\"05-23\",\"value\":null},{\"time\":\"05-24\",\"value\":null},{\"time\":\"05-25\",\"value\":null},{\"time\":\"05-26\",\"value\":null},{\"time\":\"05-27\",\"value\":null},{\"time\":\"05-28\",\"value\":null},{\"time\":\"05-29\",\"value\":null},{\"time\":\"05-30\",\"value\":null},{\"time\":\"05-31\",\"value\":null}]",
+        "payload": "{\"activePower\":[{\"ts\":1620119550000,\"value\":1},{\"ts\":1620119850000,\"value\":1},{\"ts\":1620120150000,\"value\":1},{\"ts\":1620120450000,\"value\":1},{\"ts\":1620120750000,\"value\":1},{\"ts\":1620121050000,\"value\":1},{\"ts\":1620121350000,\"value\":1},{\"ts\":1620121650000,\"value\":1},{\"ts\":1620121950000,\"value\":1},{\"ts\":1620122250000,\"value\":1},{\"ts\":1620122550000,\"value\":1},{\"ts\":1620122850000,\"value\":1},{\"ts\":1620123150000,\"value\":1},{\"ts\":1620123450000,\"value\":1},{\"ts\":1620123750000,\"value\":1},{\"ts\":1620124050000,\"value\":1},{\"ts\":1620124350000,\"value\":1},{\"ts\":1620124650000,\"value\":1},{\"ts\":1620124950000,\"value\":1},{\"ts\":1620125250000,\"value\":1},{\"ts\":1620125550000,\"value\":1},{\"ts\":1620125850000,\"value\":1},{\"ts\":1620126150000,\"value\":1},{\"ts\":1620126450000,\"value\":1},{\"ts\":1620126750000,\"value\":1},{\"ts\":1620127050000,\"value\":1},{\"ts\":1620127350000,\"value\":1},{\"ts\":1620127650000,\"value\":1},{\"ts\":1620127950000,\"value\":1},{\"ts\":1620128250000,\"value\":1},{\"ts\":1620128550000,\"value\":1},{\"ts\":1620128850000,\"value\":1},{\"ts\":1620129150000,\"value\":1},{\"ts\":1620129450000,\"value\":1},{\"ts\":1620129750000,\"value\":1},{\"ts\":1620130050000,\"value\":1},{\"ts\":1620130350000,\"value\":1},{\"ts\":1620130650000,\"value\":1},{\"ts\":1620130950000,\"value\":1},{\"ts\":1620131250000,\"value\":1},{\"ts\":1620131550000,\"value\":1},{\"ts\":1620131850000,\"value\":1},{\"ts\":1620132150000,\"value\":1},{\"ts\":1620132450000,\"value\":1},{\"ts\":1620132750000,\"value\":1},{\"ts\":1620133050000,\"value\":1},{\"ts\":1620133350000,\"value\":1},{\"ts\":1620133650000,\"value\":1},{\"ts\":1620133950000,\"value\":1},{\"ts\":1620134250000,\"value\":1},{\"ts\":1620134550000,\"value\":1},{\"ts\":1620134850000,\"value\":1},{\"ts\":1620135150000,\"value\":1},{\"ts\":1620135450000,\"value\":1},{\"ts\":1620135750000,\"value\":1},{\"ts\":1620136050000,\"value\":1},{\"ts\":1620136350000,\"value\":1},{\"ts\":1620136650000,\"value\":1},{\"ts\":1620136950000,\"value\":1},{\"ts\":1620137250000,\"value\":1},{\"ts\":1620137550000,\"value\":1},{\"ts\":1620137850000,\"value\":1},{\"ts\":1620138150000,\"value\":1},{\"ts\":1620138450000,\"value\":1},{\"ts\":1620138750000,\"value\":1},{\"ts\":1620139050000,\"value\":1},{\"ts\":1620139350000,\"value\":1},{\"ts\":1620139650000,\"value\":1},{\"ts\":1620139950000,\"value\":1},{\"ts\":1620140250000,\"value\":1},{\"ts\":1620140550000,\"value\":1},{\"ts\":1620140850000,\"value\":1},{\"ts\":1620141150000,\"value\":1},{\"ts\":1620141450000,\"value\":1},{\"ts\":1620141750000,\"value\":1},{\"ts\":1620142050000,\"value\":1},{\"ts\":1620142350000,\"value\":1},{\"ts\":1620142650000,\"value\":1},{\"ts\":1620142950000,\"value\":1},{\"ts\":1620143250000,\"value\":1},{\"ts\":1620143550000,\"value\":1},{\"ts\":1620143850000,\"value\":1},{\"ts\":1620144150000,\"value\":1},{\"ts\":1620144450000,\"value\":1},{\"ts\":1620144750000,\"value\":1},{\"ts\":1620145050000,\"value\":1},{\"ts\":1620145350000,\"value\":1},{\"ts\":1620145650000,\"value\":1},{\"ts\":1620145950000,\"value\":1},{\"ts\":1620146250000,\"value\":1},{\"ts\":1620146550000,\"value\":1},{\"ts\":1620146850000,\"value\":1},{\"ts\":1620147150000,\"value\":1},{\"ts\":1620147450000,\"value\":1},{\"ts\":1620147750000,\"value\":1},{\"ts\":1620148050000,\"value\":1},{\"ts\":1620148350000,\"value\":1},{\"ts\":1620148650000,\"value\":1},{\"ts\":1620148950000,\"value\":1},{\"ts\":1620149250000,\"value\":1},{\"ts\":1620149550000,\"value\":1},{\"ts\":1620149850000,\"value\":1},{\"ts\":1620150150000,\"value\":1},{\"ts\":1620150450000,\"value\":1},{\"ts\":1620150750000,\"value\":1},{\"ts\":1620151050000,\"value\":1},{\"ts\":1620151350000,\"value\":1},{\"ts\":1620151650000,\"value\":1},{\"ts\":1620151950000,\"value\":1},{\"ts\":1620152250000,\"value\":1},{\"ts\":1620152550000,\"value\":1},{\"ts\":1620152850000,\"value\":1},{\"ts\":1620153150000,\"value\":1},{\"ts\":1620153450000,\"value\":1},{\"ts\":1620153750000,\"value\":1},{\"ts\":1620154050000,\"value\":1},{\"ts\":1620154350000,\"value\":1},{\"ts\":1620154650000,\"value\":1},{\"ts\":1620154950000,\"value\":1},{\"ts\":1620155250000,\"value\":1},{\"ts\":1620155550000,\"value\":1},{\"ts\":1620155850000,\"value\":1},{\"ts\":1620156150000,\"value\":1},{\"ts\":1620156450000,\"value\":1},{\"ts\":1620156750000,\"value\":1},{\"ts\":1620157050000,\"value\":1},{\"ts\":1620157350000,\"value\":1},{\"ts\":1620157650000,\"value\":1},{\"ts\":1620157950000,\"value\":1},{\"ts\":1620158250000,\"value\":1},{\"ts\":1620158550000,\"value\":1},{\"ts\":1620158850000,\"value\":1},{\"ts\":1620159150000,\"value\":1},{\"ts\":1620159450000,\"value\":1},{\"ts\":1620159750000,\"value\":1},{\"ts\":1620160050000,\"value\":1},{\"ts\":1620160350000,\"value\":1},{\"ts\":1620160650000,\"value\":1},{\"ts\":1620160950000,\"value\":1},{\"ts\":1620161250000,\"value\":1},{\"ts\":1620161550000,\"value\":1},{\"ts\":1620161850000,\"value\":1},{\"ts\":1620162150000,\"value\":1},{\"ts\":1620162450000,\"value\":1},{\"ts\":1620162750000,\"value\":1},{\"ts\":1620163050000,\"value\":1},{\"ts\":1620163350000,\"value\":1},{\"ts\":1620163650000,\"value\":1},{\"ts\":1620163950000,\"value\":1},{\"ts\":1620164250000,\"value\":1},{\"ts\":1620164550000,\"value\":1},{\"ts\":1620164850000,\"value\":1},{\"ts\":1620165150000,\"value\":1},{\"ts\":1620165450000,\"value\":1},{\"ts\":1620165750000,\"value\":1},{\"ts\":1620166050000,\"value\":1},{\"ts\":1620166350000,\"value\":1},{\"ts\":1620166650000,\"value\":1},{\"ts\":1620166950000,\"value\":1},{\"ts\":1620167250000,\"value\":1},{\"ts\":1620167550000,\"value\":1},{\"ts\":1620167850000,\"value\":1},{\"ts\":1620168150000,\"value\":1},{\"ts\":1620168450000,\"value\":1},{\"ts\":1620168750000,\"value\":1},{\"ts\":1620169050000,\"value\":1},{\"ts\":1620169350000,\"value\":1},{\"ts\":1620169650000,\"value\":1},{\"ts\":1620169950000,\"value\":1},{\"ts\":1620170250000,\"value\":1},{\"ts\":1620170550000,\"value\":1},{\"ts\":1620170850000,\"value\":1},{\"ts\":1620171150000,\"value\":1},{\"ts\":1620171450000,\"value\":1},{\"ts\":1620171750000,\"value\":1},{\"ts\":1620172050000,\"value\":1},{\"ts\":1620172350000,\"value\":1},{\"ts\":1620172650000,\"value\":1},{\"ts\":1620172950000,\"value\":1},{\"ts\":1620173250000,\"value\":1},{\"ts\":1620173550000,\"value\":1},{\"ts\":1620173850000,\"value\":1},{\"ts\":1620174150000,\"value\":1},{\"ts\":1620174450000,\"value\":1},{\"ts\":1620174750000,\"value\":1},{\"ts\":1620175050000,\"value\":1},{\"ts\":1620175350000,\"value\":1},{\"ts\":1620175650000,\"value\":1},{\"ts\":1620175950000,\"value\":1},{\"ts\":1620176250000,\"value\":1},{\"ts\":1620176550000,\"value\":1},{\"ts\":1620176850000,\"value\":1},{\"ts\":1620177150000,\"value\":1},{\"ts\":1620177450000,\"value\":1},{\"ts\":1620177750000,\"value\":1},{\"ts\":1620178050000,\"value\":1},{\"ts\":1620178350000,\"value\":1},{\"ts\":1620178650000,\"value\":1},{\"ts\":1620178950000,\"value\":1},{\"ts\":1620179250000,\"value\":1},{\"ts\":1620179550000,\"value\":1},{\"ts\":1620179850000,\"value\":1},{\"ts\":1620180150000,\"value\":1},{\"ts\":1620180450000,\"value\":1},{\"ts\":1620180750000,\"value\":1},{\"ts\":1620181050000,\"value\":1},{\"ts\":1620181350000,\"value\":1},{\"ts\":1620181650000,\"value\":1},{\"ts\":1620181950000,\"value\":1},{\"ts\":1620182250000,\"value\":1},{\"ts\":1620182550000,\"value\":1},{\"ts\":1620182850000,\"value\":1},{\"ts\":1620183150000,\"value\":1},{\"ts\":1620183450000,\"value\":1},{\"ts\":1620183750000,\"value\":1},{\"ts\":1620184050000,\"value\":1},{\"ts\":1620184350000,\"value\":1},{\"ts\":1620184650000,\"value\":1},{\"ts\":1620184950000,\"value\":1},{\"ts\":1620185250000,\"value\":1},{\"ts\":1620185550000,\"value\":1},{\"ts\":1620185850000,\"value\":1},{\"ts\":1620186150000,\"value\":1},{\"ts\":1620186450000,\"value\":1},{\"ts\":1620186750000,\"value\":1},{\"ts\":1620187050000,\"value\":1},{\"ts\":1620187350000,\"value\":1},{\"ts\":1620187650000,\"value\":1},{\"ts\":1620187950000,\"value\":1},{\"ts\":1620188250000,\"value\":1},{\"ts\":1620188550000,\"value\":1},{\"ts\":1620188850000,\"value\":1},{\"ts\":1620189150000,\"value\":1},{\"ts\":1620189450000,\"value\":1},{\"ts\":1620189750000,\"value\":1},{\"ts\":1620190050000,\"value\":1},{\"ts\":1620190350000,\"value\":1},{\"ts\":1620190650000,\"value\":1},{\"ts\":1620190950000,\"value\":1},{\"ts\":1620191250000,\"value\":1},{\"ts\":1620191550000,\"value\":1},{\"ts\":1620191850000,\"value\":1},{\"ts\":1620192150000,\"value\":1},{\"ts\":1620192450000,\"value\":1},{\"ts\":1620192750000,\"value\":1},{\"ts\":1620193050000,\"value\":1},{\"ts\":1620193350000,\"value\":1},{\"ts\":1620193650000,\"value\":1},{\"ts\":1620193950000,\"value\":1},{\"ts\":1620194250000,\"value\":1},{\"ts\":1620194550000,\"value\":1},{\"ts\":1620194850000,\"value\":1},{\"ts\":1620195150000,\"value\":1},{\"ts\":1620195450000,\"value\":1},{\"ts\":1620195750000,\"value\":1},{\"ts\":1620196050000,\"value\":1},{\"ts\":1620196350000,\"value\":1},{\"ts\":1620196650000,\"value\":1},{\"ts\":1620196950000,\"value\":1},{\"ts\":1620197250000,\"value\":1},{\"ts\":1620197550000,\"value\":1},{\"ts\":1620197850000,\"value\":1},{\"ts\":1620198150000,\"value\":1},{\"ts\":1620198450000,\"value\":1},{\"ts\":1620198750000,\"value\":1},{\"ts\":1620199050000,\"value\":1},{\"ts\":1620199350000,\"value\":1},{\"ts\":1620199650000,\"value\":1},{\"ts\":1620199950000,\"value\":1},{\"ts\":1620200250000,\"value\":1},{\"ts\":1620200550000,\"value\":1},{\"ts\":1620200850000,\"value\":1},{\"ts\":1620201150000,\"value\":1},{\"ts\":1620201450000,\"value\":1},{\"ts\":1620201750000,\"value\":1},{\"ts\":1620202050000,\"value\":1},{\"ts\":1620202350000,\"value\":1},{\"ts\":1620202650000,\"value\":1},{\"ts\":1620202950000,\"value\":1},{\"ts\":1620203250000,\"value\":1},{\"ts\":1620203550000,\"value\":1},{\"ts\":1620203850000,\"value\":1},{\"ts\":1620204150000,\"value\":1},{\"ts\":1620204450000,\"value\":1},{\"ts\":1620204750000,\"value\":1},{\"ts\":1620205050000,\"value\":1},{\"ts\":1620205350000,\"value\":1},{\"ts\":1620205650000,\"value\":1},{\"ts\":1620205950000,\"value\":1}]}",
         "payloadType": "json",
-        "x": 500,
-        "y": 580,
+        "x": 390,
+        "y": 560,
         "wires": [
-            []
+            [
+                "b32696eb.c8a2f8"
+            ]
+        ]
+    },
+    {
+        "id": "b0503ed3.75b7e",
+        "type": "debug",
+        "z": "dbc1b5ab.abe0a8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 790,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "b32696eb.c8a2f8",
+        "type": "function",
+        "z": "dbc1b5ab.abe0a8",
+        "name": "",
+        "func": "var datasets = [];\nvar labels = [];\nmsg.payload.activePower.forEach(elem => {\n    datasets.push(elem.value);\n});\nmsg.payload.activePower.forEach(elem => {\n    var timestamp = '' + new Date(elem.ts);\n    timestamp = timestamp.match(/\\d+:\\d+/g)[0];\n    labels.push(timestamp);\n});\nmsg.datasets = datasets;\nmsg.labels = labels;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 600,
+        "y": 560,
+        "wires": [
+            [
+                "b0503ed3.75b7e"
+            ]
+        ]
+    },
+    {
+        "id": "69aaa37b.d3b2bc",
+        "type": "inject",
+        "z": "dbc1b5ab.abe0a8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"voltage\":[{\"ts\":1620284048385,\"value\":218.97}],\"current\":[{\"ts\":1620284048385,\"value\":1.63}],\"frequency\":[{\"ts\":1620284048385,\"value\":49}]}",
+        "payloadType": "json",
+        "x": 390,
+        "y": 640,
+        "wires": [
+            [
+                "5e8563ef.f1dccc"
+            ]
+        ]
+    },
+    {
+        "id": "82c6d8bb.f21fb8",
+        "type": "debug",
+        "z": "dbc1b5ab.abe0a8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "5e8563ef.f1dccc",
+        "type": "function",
+        "z": "dbc1b5ab.abe0a8",
+        "name": "",
+        "func": "var timestamp = Date.now() - 3600*1000*24;\nif (msg.payload.voltage[0].ts > timestamp) {\n    msg.voltage = msg.payload.voltage;\n}\n\nvar str = '2021-05-01';\nmsg.regex = str.match(/(\\W)(\\d+\\W\\d+)/)[2];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 560,
+        "y": 640,
+        "wires": [
+            [
+                "82c6d8bb.f21fb8"
+            ]
+        ]
+    },
+    {
+        "id": "92ee9985.272598",
+        "type": "inject",
+        "z": "dbc1b5ab.abe0a8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"data\":[{\"id\":{\"entityType\":\"ALARM\",\"id\":\"0b7b3910-aee9-11eb-9f25-398f4b7e9777\"},\"createdTime\":1620360150817,\"tenantId\":{\"entityType\":\"TENANT\",\"id\":\"dbdbe7e0-7bf8-11eb-b8dd-eb55e21a0b13\"},\"type\":\"activePower|critical\",\"originator\":{\"entityType\":\"ASSET\",\"id\":\"e51f4000-a807-11eb-9f25-398f4b7e9777\"},\"severity\":\"CRITICAL\",\"status\":\"ACTIVE_UNACK\",\"startTs\":1620360150816,\"endTs\":1620360231975,\"ackTs\":0,\"clearTs\":0,\"details\":{\"last\":20,\"min\":20,\"max\":20},\"propagate\":true,\"propagateRelationTypes\":[],\"originatorName\":\"Building A\",\"name\":\"activePower|critical\"}],\"totalPages\":1,\"totalElements\":1,\"hasNext\":false}",
+        "payloadType": "json",
+        "x": 370,
+        "y": 740,
+        "wires": [
+            [
+                "cfad137.3f23ff"
+            ]
+        ]
+    },
+    {
+        "id": "b5b04712.4a3248",
+        "type": "debug",
+        "z": "dbc1b5ab.abe0a8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 690,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "ceab7fcb.5580a",
+        "type": "comment",
+        "z": "dbc1b5ab.abe0a8",
+        "name": "Alarm Item for Active",
+        "info": "",
+        "x": 400,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "cfad137.3f23ff",
+        "type": "function",
+        "z": "dbc1b5ab.abe0a8",
+        "name": "",
+        "func": "msg.active = msg.payload.totalElements;\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 530,
+        "y": 740,
+        "wires": [
+            [
+                "b5b04712.4a3248"
+            ]
+        ]
+    },
+    {
+        "id": "bf4e0c86.245d4",
+        "type": "inject",
+        "z": "dbc1b5ab.abe0a8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"data\":[{\"id\":{\"entityType\":\"ALARM\",\"id\":\"8e5f6000-aede-11eb-9f25-398f4b7e9777\"},\"createdTime\":1620355645952,\"tenantId\":{\"entityType\":\"TENANT\",\"id\":\"dbdbe7e0-7bf8-11eb-b8dd-eb55e21a0b13\"},\"type\":\"activePower|critical\",\"originator\":{\"entityType\":\"ASSET\",\"id\":\"e51f4000-a807-11eb-9f25-398f4b7e9777\"},\"severity\":\"CRITICAL\",\"status\":\"CLEARED_UNACK\",\"startTs\":1620355645950,\"endTs\":1620355664974,\"ackTs\":0,\"clearTs\":1620355665981,\"details\":{\"last\":20,\"min\":20,\"max\":20},\"propagate\":true,\"propagateRelationTypes\":[],\"originatorName\":\"Building A\",\"name\":\"activePower|critical\"},{\"id\":{\"entityType\":\"ALARM\",\"id\":\"84d44a50-aede-11eb-9f25-398f4b7e9777\"},\"createdTime\":1620355629941,\"tenantId\":{\"entityType\":\"TENANT\",\"id\":\"dbdbe7e0-7bf8-11eb-b8dd-eb55e21a0b13\"},\"type\":\"activePower|critical\",\"originator\":{\"entityType\":\"ASSET\",\"id\":\"e51f4000-a807-11eb-9f25-398f4b7e9777\"},\"severity\":\"CRITICAL\",\"status\":\"CLEARED_UNACK\",\"startTs\":1620355629939,\"endTs\":1620355643936,\"ackTs\":0,\"clearTs\":1620355644913,\"details\":{\"last\":20,\"min\":20,\"max\":20},\"propagate\":true,\"propagateRelationTypes\":[],\"originatorName\":\"Building A\",\"name\":\"activePower|critical\"},{\"id\":{\"entityType\":\"ALARM\",\"id\":\"7849fe60-aede-11eb-9f25-398f4b7e9777\"},\"createdTime\":1620355608902,\"tenantId\":{\"entityType\":\"TENANT\",\"id\":\"dbdbe7e0-7bf8-11eb-b8dd-eb55e21a0b13\"},\"type\":\"activePower|critical\",\"originator\":{\"entityType\":\"ASSET\",\"id\":\"e51f4000-a807-11eb-9f25-398f4b7e9777\"},\"severity\":\"CRITICAL\",\"status\":\"CLEARED_UNACK\",\"startTs\":1620355608901,\"endTs\":1620355627927,\"ackTs\":0,\"clearTs\":1620355628942,\"details\":{\"last\":20,\"min\":20,\"max\":20},\"propagate\":true,\"propagateRelationTypes\":[],\"originatorName\":\"Building A\",\"name\":\"activePower|critical\"},{\"id\":{\"entityType\":\"ALARM\",\"id\":\"68383960-aede-11eb-9f25-398f4b7e9777\"},\"createdTime\":1620355581942,\"tenantId\":{\"entityType\":\"TENANT\",\"id\":\"dbdbe7e0-7bf8-11eb-b8dd-eb55e21a0b13\"},\"type\":\"activePower|critical\",\"originator\":{\"entityType\":\"ASSET\",\"id\":\"e51f4000-a807-11eb-9f25-398f4b7e9777\"},\"severity\":\"CRITICAL\",\"status\":\"CLEARED_UNACK\",\"startTs\":1620355581941,\"endTs\":1620355606937,\"ackTs\":0,\"clearTs\":1620355608037,\"details\":{\"last\":20,\"min\":20,\"max\":20},\"propagate\":true,\"propagateRelationTypes\":[],\"originatorName\":\"Building A\",\"name\":\"activePower|critical\"},{\"id\":{\"entityType\":\"ALARM\",\"id\":\"5e091b80-aede-11eb-9f25-398f4b7e9777\"},\"createdTime\":1620355564856,\"tenantId\":{\"entityType\":\"TENANT\",\"id\":\"dbdbe7e0-7bf8-11eb-b8dd-eb55e21a0b13\"},\"type\":\"activePower|critical\",\"originator\":{\"entityType\":\"ASSET\",\"id\":\"e51f4000-a807-11eb-9f25-398f4b7e9777\"},\"severity\":\"CRITICAL\",\"status\":\"CLEARED_UNACK\",\"startTs\":1620355564855,\"endTs\":1620355580005,\"ackTs\":0,\"clearTs\":1620355580920,\"details\":{\"last\":20,\"min\":20,\"max\":20},\"propagate\":true,\"propagateRelationTypes\":[],\"originatorName\":\"Building A\",\"name\":\"activePower|critical\"}],\"totalPages\":5,\"totalElements\":25,\"hasNext\":true}",
+        "payloadType": "json",
+        "x": 370,
+        "y": 840,
+        "wires": [
+            [
+                "5a4bc28.ea34b3c"
+            ]
+        ]
+    },
+    {
+        "id": "9c2ad0c7.48ce8",
+        "type": "debug",
+        "z": "dbc1b5ab.abe0a8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 690,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "8a798b52.b01378",
+        "type": "comment",
+        "z": "dbc1b5ab.abe0a8",
+        "name": "Alarm Table",
+        "info": "",
+        "x": 380,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "5a4bc28.ea34b3c",
+        "type": "function",
+        "z": "dbc1b5ab.abe0a8",
+        "name": "",
+        "func": "msg.pageCount = msg.payload.totalPages;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 530,
+        "y": 840,
+        "wires": [
+            [
+                "9c2ad0c7.48ce8"
+            ]
+        ]
+    },
+    {
+        "id": "409ffcb2.5ba364",
+        "type": "debug",
+        "z": "dbc1b5ab.abe0a8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "833890f.6798a7",
+        "type": "comment",
+        "z": "dbc1b5ab.abe0a8",
+        "name": "Cost Date by Level",
+        "info": "",
+        "x": 380,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "83aadd96.896e1",
+        "type": "function",
+        "z": "dbc1b5ab.abe0a8",
+        "name": "",
+        "func": "var data = [];\nvar datasetCostDay = [];\nvar consumptionMonth = 0;\nvar costMonth = 0;\nvar costMonthBefore = 0;\nvar costDay = 0;\nconst prices = [{\n        \"name\": \"Level 1\",\n        \"price\": 1678\n    },\n    {\n        \"name\": \"Level 2\",\n        \"price\": 1734\n    },\n    {\n        \"name\": \"Level 3\",\n        \"price\": 2014\n    },\n    {\n        \"name\": \"Level 4\",\n        \"price\": 2536\n    },\n    {\n        \"name\": \"Level 5\",\n        \"price\": 2834\n    },\n    {\n        \"name\": \"Level 6\",\n        \"price\": 2927\n    }\n];\n\nfor (let i=0; i<msg.payload.datasets[0].data.length; i++) {\n    var d = 0;\n    for (let j=0; j<msg.payload.datasets.length; j++) {\n        d += msg.payload.datasets[j].data[i]\n    }\n    data.push(d);\n}\n\ndata.forEach(elem => {\n    if (elem === 0) {\n        return datasetCostDay.push(0);\n    }\n    consumptionMonth += elem;\n    costMonthBefore = costMonth+costDay;\n    if (consumptionMonth >0 && consumptionMonth < 50) {\n        costMonth = consumptionMonth*prices[0].price;\n    } else if (consumptionMonth >= 50 && consumptionMonth < 100) {\n        costMonth = consumptionMonth*prices[1].price;\n    } else if (consumptionMonth >= 100 && consumptionMonth < 200) {\n        costMonth = consumptionMonth*prices[2].price;\n    } else if (consumptionMonth >= 200 && consumptionMonth < 300) {\n        costMonth = consumptionMonth*prices[3].price;\n    } else if (consumptionMonth >= 300 && consumptionMonth < 400) {\n        costMonth = consumptionMonth*prices[4].price;\n    } else if (consumptionMonth >= 400) {\n        costMonth = consumptionMonth*prices[5].price\n    }\n    costDay = costMonth - costMonthBefore;\n    return datasetCostDay.push(costDay);\n})\n\nmsg.data = data;\nmsg.datasetCostDay = datasetCostDay;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 510,
+        "y": 940,
+        "wires": [
+            [
+                "409ffcb2.5ba364"
+            ]
+        ]
+    },
+    {
+        "id": "2ed11584.28a73a",
+        "type": "inject",
+        "z": "dbc1b5ab.abe0a8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"labels\":[\"2021-05-01\",\"2021-05-02\",\"2021-05-03\",\"2021-05-04\",\"2021-05-05\",\"2021-05-06\",\"2021-05-07\",\"2021-05-08\",\"2021-05-09\",\"2021-05-10\",\"2021-05-11\",\"2021-05-12\",\"2021-05-13\",\"2021-05-14\",\"2021-05-15\",\"2021-05-16\",\"2021-05-17\",\"2021-05-18\",\"2021-05-19\",\"2021-05-20\",\"2021-05-21\",\"2021-05-22\",\"2021-05-23\",\"2021-05-24\",\"2021-05-25\",\"2021-05-26\",\"2021-05-27\",\"2021-05-28\",\"2021-05-29\",\"2021-05-30\",\"2021-05-31\"],\"datasets\":[{\"label\":\"Other\",\"barPercentage\":0.5,\"data\":[10800,10800,10800,10800,10800,7581,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],\"backgroundColor\":\"#ff6384\",\"animations\":{\"numbers\":{},\"colors\":{}}}]}",
+        "payloadType": "json",
+        "x": 350,
+        "y": 940,
+        "wires": [
+            [
+                "83aadd96.896e1"
+            ]
+        ]
+    },
+    {
+        "id": "9c17802.2c5698",
+        "type": "inject",
+        "z": "3dd13241.f528fe",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "50",
+        "payloadType": "num",
+        "x": 350,
+        "y": 620,
+        "wires": [
+            [
+                "4c45aa1f.a1a424"
+            ]
+        ]
+    },
+    {
+        "id": "4af2077d.6d1948",
+        "type": "debug",
+        "z": "3dd13241.f528fe",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "4c45aa1f.a1a424",
+        "type": "function",
+        "z": "3dd13241.f528fe",
+        "name": "",
+        "func": "var farr = new Float32Array(1); \n\nfarr[0] = 50;\nfarr[1] = 0;\n\nvar barr = new Int16Array(farr.buffer);\nmsg.value = barr;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 540,
+        "y": 640,
+        "wires": [
+            [
+                "4af2077d.6d1948"
+            ]
+        ]
+    },
+    {
+        "id": "3643b370.47904c",
+        "type": "function",
+        "z": "3dd13241.f528fe",
+        "name": "",
+        "func": "//  const buf = Buffer.from(msg.payload.buffer).swap32(); \n//  const value = buf.readFloatLE();\n//  msg.value = value;\n let pay = [0, 0, 72, 66];\n const buf = Buffer.allocUnsafe(4);\n buf.writeInt16LE(pay[0],0);\n buf.writeInt16LE(pay[1],2);\n msg.value = buf.readFloatLE(0);\n return msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 520,
+        "y": 700,
+        "wires": [
+            [
+                "219a126d.192e3e"
+            ]
+        ]
+    },
+    {
+        "id": "73d52d56.ab6ad4",
+        "type": "inject",
+        "z": "3dd13241.f528fe",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[53,48]",
+        "payloadType": "bin",
+        "x": 350,
+        "y": 680,
+        "wires": [
+            [
+                "3643b370.47904c"
+            ]
+        ]
+    },
+    {
+        "id": "219a126d.192e3e",
+        "type": "debug",
+        "z": "3dd13241.f528fe",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "50029ad4.f70d54",
+        "type": "inject",
+        "z": "b37d6511.b0cd18",
+        "name": "Create Database",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"q\":\"CREATE DATABASE solar\"}",
+        "payloadType": "json",
+        "x": 300,
+        "y": 40,
+        "wires": [
+            [
+                "3a4f2616.c0ec5a"
+            ]
+        ]
+    },
+    {
+        "id": "3a4f2616.c0ec5a",
+        "type": "http request",
+        "z": "b37d6511.b0cd18",
+        "name": "Create Database",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://this-influxdb:8086/query?q={{ payload.q }}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 510,
+        "y": 40,
+        "wires": [
+            [
+                "ddbd0d70.034bf"
+            ]
+        ]
+    },
+    {
+        "id": "ddbd0d70.034bf",
+        "type": "debug",
+        "z": "b37d6511.b0cd18",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 750,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "41f04d4c.c23ba4",
+        "type": "inject",
+        "z": "b37d6511.b0cd18",
+        "name": "Drop Database",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"q\":\"DROP DATABASE savina\"}",
+        "payloadType": "json",
+        "x": 300,
+        "y": 120,
+        "wires": [
+            [
+                "5eee9385.e84c8c"
+            ]
+        ]
+    },
+    {
+        "id": "5eee9385.e84c8c",
+        "type": "http request",
+        "z": "b37d6511.b0cd18",
+        "name": "Drop Database",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://this-influxdb:8086/query?q={{ payload.q }}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 500,
+        "y": 120,
+        "wires": [
+            [
+                "89831f2d.b219d"
+            ]
+        ]
+    },
+    {
+        "id": "89831f2d.b219d",
+        "type": "debug",
+        "z": "b37d6511.b0cd18",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 750,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "d04f180e.75af48",
+        "type": "debug",
+        "z": "b37d6511.b0cd18",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 830,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "a99f05e0.fcbd18",
+        "type": "inject",
+        "z": "b37d6511.b0cd18",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "cpu_load_short,host=server02,region=us-west value=0.55 1422568543702900257",
+        "payloadType": "str",
+        "x": 130,
+        "y": 320,
+        "wires": [
+            [
+                "b2b49b97.16c0d8"
+            ]
+        ]
+    },
+    {
+        "id": "b2b49b97.16c0d8",
+        "type": "http request",
+        "z": "b37d6511.b0cd18",
+        "name": "Add Database",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://this-influxdb:8086/write?db=s avina&precision=ns",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 580,
+        "y": 320,
+        "wires": [
+            [
+                "d04f180e.75af48"
+            ]
+        ]
+    },
+    {
+        "id": "a4bb89bc.1c3bf8",
+        "type": "mqtt in",
+        "z": "b37d6511.b0cd18",
+        "name": "mqtt",
+        "topic": "danang/savina/department01/line01/SE300H-730714B5/one/3kW",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "4aea6191.9fe73",
+        "x": 170,
+        "y": 460,
+        "wires": [
+            [
+                "6b5895ab.0bdfbc"
+            ]
+        ]
+    },
+    {
+        "id": "ca734cd2.38a85",
+        "type": "debug",
+        "z": "b37d6511.b0cd18",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 950,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "6b5895ab.0bdfbc",
+        "type": "json",
+        "z": "b37d6511.b0cd18",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 370,
+        "y": 460,
+        "wires": [
+            [
+                "cfe87a82.e40888"
+            ]
+        ]
+    },
+    {
+        "id": "cd646970.4b6598",
+        "type": "inject",
+        "z": "b37d6511.b0cd18",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "danang/savina/department01/line01/SE300H-730714B5/one/3kW",
+        "payload": "{\"d\":[{\"tag\":\"SE3000H-730714B5:C_SunSpec_DID\",\"value\":101},{\"tag\":\"SE3000H-730714B5:I_Status\",\"value\":1},{\"tag\":\"I_AC_Current\",\"value\":0},{\"tag\":\"I_AC_CurrentA\",\"value\":0},{\"tag\":\"I_AC_CurrentB\",\"value\":655.35},{\"tag\":\"I_AC_CurrentC\",\"value\":655.35},{\"tag\":\"I_AC_VoltageAB\",\"value\":215.7},{\"tag\":\"I_AC_VoltageBC\",\"value\":6553.5},{\"tag\":\"I_AC_VoltageCA\",\"value\":6553.5},{\"tag\":\"I_AC_VoltageAN1\",\"value\":6553.5},{\"tag\":\"I_AC_VoltageBN1\",\"value\":6553.5},{\"tag\":\"I_AC_VoltageCN1\",\"value\":6553.5},{\"tag\":\"I_AC_Power\",\"value\":0},{\"tag\":\"I_AC_Frequency\",\"value\":50.06},{\"tag\":\"I_AC_VA\",\"value\":0},{\"tag\":\"I_AC_VAR\",\"value\":0},{\"tag\":\"I_AC_PF\",\"value\":0},{\"tag\":\"I_AC_Energy_WH\",\"value\":0},{\"tag\":\"I_DC_Current\",\"value\":0},{\"tag\":\"I_DC_Voltage\",\"value\":0},{\"tag\":\"I_DC_Power\",\"value\":0},{\"tag\":\"I_Temp_Sink\",\"value\":30.2}],\"ts\":\"2021-05-20T04:45:10+0000\"}",
+        "payloadType": "json",
+        "x": 310,
+        "y": 620,
+        "wires": [
+            [
+                "81593361.e6436"
+            ]
+        ]
+    },
+    {
+        "id": "bbd8a988.4e0698",
+        "type": "debug",
+        "z": "b37d6511.b0cd18",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 850,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "81593361.e6436",
+        "type": "function",
+        "z": "b37d6511.b0cd18",
+        "name": "",
+        "func": "// Convert to JSON\nfunction escape_string(string) {\n    return string.replace(/\\s/ig,'\\\\ ').replace(/\\,/g,'\\\\,').replace(/\\=/g,'\\\\ =');\n}\n\nvar data = [];\n\nvar stringSplit = msg.topic.split('/')\n\nvar tags = [\n    `region=${escape_string(stringSplit[0])}`,\n    `plant=${escape_string(stringSplit[1])}`,\n    `area=${escape_string(stringSplit[2])}`,\n    `line=${escape_string(stringSplit[3])}`,\n    `model=${escape_string(stringSplit[4]).split('-')[0]}`,\n    `sn=${escape_string(stringSplit[4]).split('-')[1]}`,\n    `type=${escape_string(stringSplit[5])}`,\n    `maxPower=${escape_string(stringSplit[6])}`\n];\n\nvar timestamp = Date.parse(msg.payload.ts);\nmsg.payload.d.forEach(elem => {\n    if (elem.tag === 'SE3000H-730714B5:C_SunSpec_DID') {\n        return true;\n    }\n    if (elem.tag.includes(':')) {\n        measure = escape_string(elem.tag.split(':')[1]);\n        value = elem.value;\n        data.push(`${measure},${tags.join(',')} value=${value} ${timestamp}`);\n        return true;\n    }\n    measure = elem.tag;\n    value = elem.value;\n    data.push(`${measure},${tags.join(',')} value=${value} ${timestamp}`);\n})\n\nmsg.payload = data.join('\\n');\nmsg.db = 'solar';\nmsg.precision = 'ms';\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 480,
+        "y": 620,
+        "wires": [
+            [
+                "cbdb2852.fa3cc8"
+            ]
+        ]
+    },
+    {
+        "id": "cbdb2852.fa3cc8",
+        "type": "http request",
+        "z": "b37d6511.b0cd18",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://this-influxdb:8086/write?db={{db}}&precision={{precision}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 670,
+        "y": 620,
+        "wires": [
+            [
+                "bbd8a988.4e0698"
+            ]
+        ]
+    },
+    {
+        "id": "cfe87a82.e40888",
+        "type": "function",
+        "z": "b37d6511.b0cd18",
+        "name": "",
+        "func": "// Convert to JSON\nfunction escape_string(string) {\n    return string.replace(/\\s/ig,'\\\\ ').replace(/\\,/g,'\\\\,').replace(/\\=/g,'\\\\ =');\n}\n\nvar data = [];\n\nvar stringSplit = msg.topic.split('/')\n\nvar tags = [\n    `region=${escape_string(stringSplit[0])}`,\n    `plant=${escape_string(stringSplit[1])}`,\n    `area=${escape_string(stringSplit[2])}`,\n    `line=${escape_string(stringSplit[3])}`,\n    `model=${escape_string(stringSplit[4]).split('-')[0]}`,\n    `sn=${escape_string(stringSplit[4]).split('-')[1]}`,\n    `type=${escape_string(stringSplit[5])}`,\n    `maxPower=${escape_string(stringSplit[6])}`\n];\n\nvar timestamp = Date.parse(msg.payload.ts);\nmsg.payload.d.forEach(elem => {\n    if (elem.tag === 'SE3000H-730714B5:C_SunSpec_DID') {\n        return true;\n    }\n    if (elem.tag.includes(':')) {\n        measure = escape_string(elem.tag.split(':')[1]);\n        value = elem.value;\n        data.push(`${measure},${tags.join(',')} value=${value} ${timestamp}`);\n        return true;\n    }\n    measure = elem.tag;\n    value = elem.value;\n    data.push(`${measure},${tags.join(',')} value=${value} ${timestamp}`);\n})\n\nmsg.payload = data.join('\\n');\nmsg.db = 'solar';\nmsg.precision = 'ms';\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 520,
+        "y": 460,
+        "wires": [
+            [
+                "9f5dd96a.909d28"
+            ]
+        ]
+    },
+    {
+        "id": "9f5dd96a.909d28",
+        "type": "http request",
+        "z": "b37d6511.b0cd18",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://this-influxdb:8086/write?db={{db}}&precision={{precision}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 710,
+        "y": 460,
+        "wires": [
+            [
+                "ca734cd2.38a85"
+            ]
+        ]
+    },
+    {
+        "id": "dd3e69e3.fe0be8",
+        "type": "inject",
+        "z": "b37d6511.b0cd18",
+        "name": "Create Database",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"q\":\"CREATE DATABASE solar\"}",
+        "payloadType": "json",
+        "x": 220,
+        "y": 380,
+        "wires": [
+            [
+                "22ba3f70.77da1"
+            ]
+        ]
+    },
+    {
+        "id": "22ba3f70.77da1",
+        "type": "http request",
+        "z": "b37d6511.b0cd18",
+        "name": "Create Database",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://this-influxdb:8086/query?q={{ payload.q }}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 430,
+        "y": 380,
+        "wires": [
+            [
+                "f45b9017.cb171"
+            ]
+        ]
+    },
+    {
+        "id": "f45b9017.cb171",
+        "type": "debug",
+        "z": "b37d6511.b0cd18",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "da39a9a5.467de8",
+        "type": "influxdb in",
+        "z": "b37d6511.b0cd18",
+        "influxdb": "70b5a5fa.0c0d1c",
+        "name": "query",
+        "query": "",
+        "rawOutput": false,
+        "precision": "",
+        "retentionPolicy": "",
+        "org": "organisation",
+        "x": 510,
+        "y": 740,
+        "wires": [
+            [
+                "15963d7b.81d303"
+            ]
+        ]
+    },
+    {
+        "id": "847c6cbe.38b51",
+        "type": "inject",
+        "z": "b37d6511.b0cd18",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3600",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "cpu_load_short,host=server02,region=us-west value=0.55 1422568543702900257",
+        "payloadType": "str",
+        "x": 130,
+        "y": 740,
+        "wires": [
+            [
+                "7b7a04c9.3bce8c"
+            ]
+        ]
+    },
+    {
+        "id": "15963d7b.81d303",
+        "type": "debug",
+        "z": "b37d6511.b0cd18",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "7b7a04c9.3bce8c",
+        "type": "function",
+        "z": "b37d6511.b0cd18",
+        "name": "",
+        "func": "\n\n// msg.query = 'SELECT mean(value) FROM I_AC_VoltageAB WHERE time > now() - 6h AND time < now() GROUP BY time(1h) fill(null)'\nmsg.query = 'SELECT last(value) - first(value) as value into I_AC_Energy_WH_hour from I_AC_Energy_WH where time < now() GROUP BY time(1h),*'\n\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 320,
+        "y": 740,
+        "wires": [
+            [
+                "da39a9a5.467de8"
+            ]
+        ]
+    },
+    {
+        "id": "53ea8b01.3ee7b4",
+        "type": "inject",
+        "z": "b37d6511.b0cd18",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "cpu_load_short,host=server02,region=us-west value=0.55 1422568543702900257",
+        "payloadType": "str",
+        "x": 130,
+        "y": 820,
+        "wires": [
+            [
+                "73a6046e.1f101c"
+            ]
+        ]
+    },
+    {
+        "id": "175d8c19.beea14",
+        "type": "influxdb in",
+        "z": "b37d6511.b0cd18",
+        "influxdb": "70b5a5fa.0c0d1c",
+        "name": "query",
+        "query": "DROP MEASUREMENT I_AC_Energy_WH_hour",
+        "rawOutput": false,
+        "precision": "",
+        "retentionPolicy": "",
+        "org": "organisation",
+        "x": 550,
+        "y": 820,
+        "wires": [
+            [
+                "480a0f21.141f6"
+            ]
+        ]
+    },
+    {
+        "id": "5202021b.b50efc",
+        "type": "debug",
+        "z": "b37d6511.b0cd18",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 910,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "6d49cdab.d04934",
+        "type": "inject",
+        "z": "b37d6511.b0cd18",
+        "name": "DROP MEASUREMENT",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "cpu_load_short,host=server02,region=us-west value=0.55 1422568543702900257",
+        "payloadType": "str",
+        "x": 250,
+        "y": 180,
+        "wires": [
+            [
+                "906ab965.08df78"
+            ]
+        ]
+    },
+    {
+        "id": "906ab965.08df78",
+        "type": "influxdb in",
+        "z": "b37d6511.b0cd18",
+        "influxdb": "70b5a5fa.0c0d1c",
+        "name": "query",
+        "query": "DROP MEASUREMENT I_AC_Energy_WH_hour",
+        "rawOutput": false,
+        "precision": "",
+        "retentionPolicy": "",
+        "org": "organisation",
+        "x": 470,
+        "y": 180,
+        "wires": [
+            [
+                "5f04ef44.f0c58"
+            ]
+        ]
+    },
+    {
+        "id": "5f04ef44.f0c58",
+        "type": "debug",
+        "z": "b37d6511.b0cd18",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 650,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "73a6046e.1f101c",
+        "type": "function",
+        "z": "b37d6511.b0cd18",
+        "name": "",
+        "func": "\n\n// msg.query = 'SELECT mean(value) FROM I_AC_VoltageAB WHERE time > now() - 6h AND time < now() GROUP BY time(1h) fill(null)'\nmsg.query = \"select * from I_AC_Energy_WH_hour where time = '2021-05-20T04:00:00Z';\"\n\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 320,
+        "y": 820,
+        "wires": [
+            [
+                "175d8c19.beea14"
+            ]
+        ]
+    },
+    {
+        "id": "494d830b.c684bc",
+        "type": "influxdb in",
+        "z": "b37d6511.b0cd18",
+        "influxdb": "70b5a5fa.0c0d1c",
+        "name": "query",
+        "query": "DROP MEASUREMENT I_AC_Energy_WH_hour",
+        "rawOutput": false,
+        "precision": "",
+        "retentionPolicy": "",
+        "org": "organisation",
+        "x": 550,
+        "y": 880,
+        "wires": [
+            [
+                "5202021b.b50efc"
+            ]
+        ]
+    },
+    {
+        "id": "480a0f21.141f6",
+        "type": "function",
+        "z": "b37d6511.b0cd18",
+        "name": "",
+        "func": "\n\n// msg.query = 'SELECT mean(value) FROM I_AC_VoltageAB WHERE time > now() - 6h AND time < now() GROUP BY time(1h) fill(null)'\nmsg.query = \"select * from I_AC_Energy_WH_hour where time = '2021-05-20T04:00:00Z';\"\n\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 240,
+        "y": 880,
+        "wires": [
+            [
+                "494d830b.c684bc"
+            ]
         ]
     }
 ]
